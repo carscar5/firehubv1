@@ -1,0 +1,3883 @@
+local KINGHUBMOBILE = Instance.new("ScreenGui")
+local _100x100 = Instance.new("Frame")
+local ImageButton = Instance.new("ImageButton")
+
+KINGHUBMOBILE.Name = "Fire Hub V1"
+KINGHUBMOBILE.Parent = game:WaitForChild("CoreGui")
+KINGHUBMOBILE.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+_100x100.Name = "100x100"
+_100x100.Parent = KINGHUBMOBILE
+_100x100.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+_100x100.Position = UDim2.new(0.822025776, 0, 0.0401606411, 0)
+_100x100.Size = UDim2.new(0, 66, 0, 60)
+
+ImageButton.Parent = _100x100
+ImageButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageButton.Size = UDim2.new(0, 66, 0, 70)
+ImageButton.Image = "http://www.roblox.com/asset/?id=https://11263246598"
+ImageButton.MouseButton1Down:connect(function()
+	local vim = game:service("VirtualInputManager")
+	vim:SendKeyEvent(true, "RightControl", false, game)
+
+	local vim = game:service("VirtualInputManager")
+	vim:SendKeyEvent(fales, "RightControl", false, game)
+end)
+
+local UILib = loadstring(game:HttpGet('https://pastebin.com/raw/5p69WmCy'))();
+local notifications = loadstring(game:HttpGet(("https://pastebin.com/raw/CcenX7YB"),true))()
+local win = UILib:Window("Fire Hub V1",Color3.fromRGB(102, 255, 153), Enum.KeyCode.RightControl)
+local NotificationHolder = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Module.Lua"))()
+local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Client.Lua"))()
+
+--- Section
+
+local HomeSection = win:Tab("Home")
+local HardcoreSection = win:Tab("Hardcore")
+local PlayerSection = win:Tab("Player")
+local VisualSection = win:Tab("Visual")
+local ItemSection = win:Tab("Item")
+local SpawnSection = win:Tab("Spawn")
+
+--- Buttons
+
+HomeSection:Button(" Fire Hub V1 info", function()
+end)
+HomeSection:Button("Note: The scripts will work depends on your executor", function()
+end)
+HomeSection:Button("Made by: Team  Hell0", function()
+end)
+HomeSection:Button("Teak Hell0 On Top:", function()
+end)
+HomeSection:Button("carscar5: Owner and script maker", function()
+end)
+HomeSection:Button("carscar5: Special dev and script maker", function()
+end)
+HomeSection:Button("w/status/deleted: Good making scripts(New dev!)", function()
+end)
+HomeSection:Button("carscar5: UI Library maker for some scripts(No participation in this script)", function()
+end)
+HomeSection:Button("Version: V1", function()
+end)
+HomeSection:Button("Theme: Default", function()
+end)
+HomeSection:Button("Copy discord link", function()
+setclipboard("https://discord.gg/HXmyqECfYP")
+end)
+
+HardcoreSection:Button("Hardcore mode (Scroll below to activate)", function()
+end)
+HardcoreSection:Button("Hardcore contain: New entityes - Hard Game - Unique things", function()
+end)
+HardcoreSection:Button("Entityes: A-60 - Depth - Troll Face - More", function()
+end)
+HardcoreSection:Button("Modifications: Entityes more fast - More likely to appear(Entityes) - More", function()
+end)
+HardcoreSection:Button("Note: Hardcore mode will work depends on your executor", function()
+end)
+HardcoreSection:Button("Any bug or suggestion report on Discord Server", function()
+end)
+HardcoreSection:Button("Activate Hardcore(Can't stop)", function()
+wait(15)
+local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/ChronoAccelerator/CometV4/main/Misc/CustomCreator.lua"))()
+
+
+-- Create entity
+local entity = Creator.createEntity({
+    CustomName = "Depth", -- Custom name of your entity
+    Model = "rbxassetid://11524906962", -- Can be GitHub file or rbxassetid
+    Speed = 270, -- Percentage, 100 = default Rush speed
+    DelayTime = 1.5, -- Time before starting cycles (seconds)
+    HeightOffset = 0,
+    KillRange = 70,
+    BreakLights = true,
+    BackwardsMovement = true,
+    FlickerLights = {
+        true, -- Enabled/Disabled
+        7, -- Time (seconds)
+    },
+    Cycles = {
+        Min = 2,
+        Max = 7,
+        WaitTime = 2,
+    },
+    CamShake = {
+        true, -- Enabled/Disabled
+        {3.5, 20, 0.1, 1}, -- Shake values (don't change if you don't know)
+        0, -- Shake start distance (from Entity to you)
+    },
+    Jumpscare = {
+        true, -- Enabled/Disabled
+        {
+            Image1 = "rbxassetid://11524906962", -- Image1 url
+            Image2 = "rbxassetid://11524906962", -- Image2 url
+            Shake = true,
+            Sound1 = {
+                8880765497, -- SoundId
+                { Volume = 1 }, -- Sound properties
+            },
+            Sound2 = {
+                9045199073, -- SoundId
+                { Volume = 1 }, -- Sound properties
+            },
+            Flashing = {
+                true, -- Enabled/Disabled
+                Color3.fromRGB(255, 255, 255), -- Color
+            },
+            Tease = {
+                true, -- Enabled/Disabled
+                Min = 1,
+                Max = 1,
+            },
+        },
+    },
+    CustomDialog = {"You died to who you call Depth.", "It's a fast one!", "Use what you have learned from ambush !"}, -- Custom death message
+})
+
+-----[[ Advanced ]]-----
+entity.Debug.OnEntitySpawned = function(entityTable)
+    print("Entity has spawned:", entityTable.Model)
+end
+
+entity.Debug.OnEntityDespawned = function(entityTable)
+    print("Entity has despawned:", entityTable.Model)
+end
+
+entity.Debug.OnEntityStartMoving = function(entityTable)
+     CanKill = true
+end
+
+entity.Debug.OnEntityFinishedRebound = function(entityTable)
+    print("Entity has finished rebound:", entityTable.Model)
+end
+
+entity.Debug.OnEntityEnteredRoom = function(entityTable, room)
+    print("Entity:", entityTable.Model, "has entered room:", room)
+end
+
+entity.Debug.OnLookAtEntity = function(entityTable)
+    print("Player has looked at entity:", entityTable.Model)
+end
+
+entity.Debug.OnDeath = function(entityTable)
+end
+------------------------
+
+-- Run the created entity
+Creator.runEntity(entity)
+wait(10)
+    local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
+ 
+-- Create entity
+local entity = Creator.createEntity({
+    CustomName = "A-60", -- Custom name of your entity
+    Model = "rbxassetid://11573495258", -- Can be GitHub file or rbxassetid
+    Speed = 252, -- Percentage, 100 = default Rush speed
+    DelayTime = 1.5, -- Time before starting cycles (seconds)
+    HeightOffset = 0,
+    CanKill = true,
+    KillRange = 40,
+    BreakLights = true,
+    BackwardsMovement = false,
+    FlickerLights = {
+        true, -- Enabled/Disabled
+        5, -- Time (seconds)
+    },
+    Cycles = {
+        Min = 2,
+        Max = 8,
+        WaitTime = 3,
+    },
+    CamShake = {
+        true, -- Enabled/Disabled
+        {3.5, 20, 0.1, 1}, -- Shake values (don't change if you don't know)
+        0, -- Shake start distance (from Entity to you)
+    },
+    Jumpscare = {
+        false, -- Enabled/Disabled
+        {
+            Image1 = "rbxassetid://10110576663", -- Image1 url
+            Image2 = "rbxassetid://10110576663", -- Image2 url
+            Shake = true,
+            Sound1 = {
+                8880765497, -- SoundId
+                { Volume = 1 }, -- Sound properties
+            },
+            Sound2 = {
+                9045199073, -- SoundId
+                { Volume = 1 }, -- Sound properties
+            },
+            Flashing = {
+                true, -- Enabled/Disabled
+                Color3.fromRGB(255, 255, 255), -- Color
+            },
+            Tease = {
+                false, -- Enabled/Disabled
+                Min = 1,
+                Max = 3,
+            },
+        },
+    },
+    CustomDialog = {"You died to who you call A-60.", "It's a tricky one!", "Use what you have learned from ambush!"}, -- Custom death message
+})
+ 
+-- Run the created entity
+Creator.runEntity(entity)
+wait(30)
+    local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
+
+-- Create entity
+local entity = Creator.createEntity({
+    CustomName = "Angry Munci", -- Custom name of your entity
+    Model = "rbxassetid://10957184278", -- Can be GitHub file or rbxassetid
+    Speed = 250, -- Percentage, 100 = default Rush speed
+    DelayTime = 1.5, -- Time before starting cycles (seconds)
+    HeightOffset = 0,
+    CanKill = true,
+    KillRange = 50,
+    BreakLights = true,
+    BackwardsMovement = false,
+    FlickerLights = {
+        true, -- Enabled/Disabled
+        5, -- Time (seconds)
+    },
+    Cycles = {
+        Min = 2,
+        Max = 8,
+        WaitTime = 3,
+    },
+    CamShake = {
+        true, -- Enabled/Disabled
+        {3.5, 20, 0.1, 1}, -- Shake values (don't change if you don't know)
+        0, -- Shake start distance (from Entity to you)
+    },
+    Jumpscare = {
+        false, -- Enabled/Disabled
+        {
+            Image1 = "rbxassetid://10110576663", -- Image1 url
+            Image2 = "rbxassetid://10110576663", -- Image2 url
+            Shake = true,
+            Sound1 = {
+                8880765497, -- SoundId
+                { Volume = 1 }, -- Sound properties
+            },
+            Sound2 = {
+                9045199073, -- SoundId
+                { Volume = 1 }, -- Sound properties
+            },
+            Flashing = {
+                true, -- Enabled/Disabled
+                Color3.fromRGB(255, 255, 255), -- Color
+            },
+            Tease = {
+                false, -- Enabled/Disabled
+                Min = 1,
+                Max = 3,
+            },
+        },
+    },
+    CustomDialog = {"You died to who you call Angry Munci", "It's a tricky one!", "Use what you have learned from uhh i dont even know anymore lol"}, -- Custom death message
+})
+
+-- Run the created entity
+Creator.runEntity(entity)
+wait(50)
+    local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
+
+-- Create entity
+local entity = Creator.createEntity({
+    CustomName = "Ambush", -- Custom name of your entity
+    Model = "rbxassetid://10863025672", -- Can be GitHub file or rbxassetid
+    Speed = 250, -- Percentage, 100 = default Rush speed
+    DelayTime = 1.5, -- Time before starting cycles (seconds)
+    HeightOffset = 0,
+    CanKill = true,
+    KillRange = 50,
+    BreakLights = true,
+    BackwardsMovement = false,
+    FlickerLights = {
+        true, -- Enabled/Disabled
+        5, -- Time (seconds)
+    },
+    Cycles = {
+        Min = 2,
+        Max = 8,
+        WaitTime = 3,
+    },
+    CamShake = {
+        true, -- Enabled/Disabled
+        {3.5, 20, 0.1, 1}, -- Shake values (don't change if you don't know)
+        0, -- Shake start distance (from Entity to you)
+    },
+    Jumpscare = {
+        false, -- Enabled/Disabled
+        {
+            Image1 = "rbxassetid://10110576663", -- Image1 url
+            Image2 = "rbxassetid://10110576663", -- Image2 url
+            Shake = true,
+            Sound1 = {
+                8880765497, -- SoundId
+                { Volume = 1 }, -- Sound properties
+            },
+            Sound2 = {
+                9045199073, -- SoundId
+                { Volume = 1 }, -- Sound properties
+            },
+            Flashing = {
+                true, -- Enabled/Disabled
+                Color3.fromRGB(255, 255, 255), -- Color
+            },
+            Tease = {
+                false, -- Enabled/Disabled
+                Min = 1,
+                Max = 3,
+            },
+        },
+    },
+    CustomDialog = {"You died to who you call Ambush", "It's a tricky one!", "Use what you have learned from Rush!"}, -- Custom death message
+})
+
+-- Run the created entity
+Creator.runEntity(entity)
+wait(20)
+    local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
+
+-- Create entity
+local entity = Creator.createEntity({
+    CustomName = "TrollFace (by panda)", -- Custom name of your entity
+    Model = "rbxassetid://11541624412", -- Can be GitHub file or rbxassetid
+    Speed = 400, -- Percentage, 100 = default Rush speed
+    DelayTime = 2, -- Time before starting cycles (seconds)
+    HeightOffset = 0,
+    CanKill = true,
+    KillRange = 50,
+    BreakLights = true,
+    BackwardsMovement = false,
+    FlickerLights = {
+        true, -- Enabled/Disabled
+        5, -- Time (seconds)
+    },
+    Cycles = {
+        Min = 99,
+        Max = 99,
+        WaitTime = 3,
+    },
+    CamShake = {
+        true, -- Enabled/Disabled
+        {3.5, 20, 0.1, 1}, -- Shake values (don't change if you don't know)
+        0, -- Shake start distance (from Entity to you)
+    },
+    Jumpscare = {
+        false, -- Enabled/Disabled
+        {
+            Image1 = "rbxassetid://10110576663", -- Image1 url
+            Image2 = "rbxassetid://10110576663", -- Image2 url
+            Shake = true,
+            Sound1 = {
+                8880765497, -- SoundId
+                { Volume = 1 }, -- Sound properties
+            },
+            Sound2 = {
+                9045199073, -- SoundId
+                { Volume = 1 }, -- Sound properties
+            },
+            Flashing = {
+                true, -- Enabled/Disabled
+                Color3.fromRGB(255, 255, 255), -- Color
+            },
+            Tease = {
+                false, -- Enabled/Disabled
+                Min = 1,
+                Max = 3,
+            },
+        },
+    },
+    CustomDialog = {"Uhh..", "Alright."}, -- Custom death message
+})
+
+-- Run the created entity
+Creator.runEntity(entity)
+end)
+
+PlayerSection:Toggle("Speed (Lower)",false, function(SPEEDHACKER)
+_G.God = SPEEDHACKER
+while _G.God do wait()
+    pcall(function()
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 30
+    end)
+ end
+end)
+
+PlayerSection:Toggle("Speed (Medium)",false, function(SPEEDHACKER)
+_G.God = SPEEDHACKER
+while _G.God do wait()
+    pcall(function()
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 100
+    end)
+ end
+end)
+
+PlayerSection:Toggle("Speed (Higer)",false, function(SPEEDHACKER)
+_G.God = SPEEDHACKER
+while _G.God do wait()
+    pcall(function()
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 150
+    end)
+ end
+end)
+
+PlayerSection:Toggle("Noclip",false, function(noclip)
+        getgenv().col = noclip
+       for i,v in next, game.Players.LocalPlayer.Character:GetDescendants() do
+          if v.IsA(v,"BasePart") and getgenv().col == false then
+             v.CanCollide = true
+          elseif v.IsA(v,"BasePart") and getgenv().col == true then
+            v.CanCollide = false
+          end
+       end
+end)
+
+PlayerSection:Toggle("Auto win Heartbeat",false, function(Heartbeat)
+   getgenv().winhb = Heartbeat
+    local function outline(dad)
+        local esp = Instance.new("Highlight")
+        esp.Name = "Outline"
+        esp.FillTransparency = 1
+        esp.FillColor = Color3.new(102, 255, 153)
+        esp.OutlineColor = Color3.new(102, 255, 153)
+        esp.OutlineTransparency = 0
+        esp.Parent = dad
+    end
+
+    function getbullshit()
+        local function getname(a)
+            return bullshittable[a.Parent.Name]
+        end
+
+        local function checkifstillthere(a)
+            for _,v in pairs(a) do
+                if v.Parent == nil then
+                    table.remove(a, i)
+                end
+            end
+        end
+
+        while task.wait(1) do
+            for _,v in pairs(game:GetService("Workspace").CurrentRooms:GetDescendants()) do 
+                if v:IsA("ProximityPrompt") and table.find(prompttable, v.Parent.Name) then
+                     table.insert(getname(v), v)
+                end
+            end
+
+            for _,v in pairs(bullshittable) do
+                checkifstillthere(v)
+            end
+        end
+    end
+    coroutine.wrap(getbullshit)()
+
+local old
+old = hookmetamethod(game,"__namecall",function(self,...)
+    local args = {...}
+    local method = getnamecallmethod()
+    
+    if tostring(self) == 'ClutchHeartbeat' and method == "FireServer" and getgenv().winhb then
+        args[2] = true
+        return old(self,unpack(args))
+    end
+    
+    return old(self,...)
+end)
+end)
+
+PlayerSection:Button("Skip Level", function()
+        pcall(function()
+            local HasKey = false
+            local CurrentDoor = workspace.CurrentRooms[tostring(game:GetService("ReplicatedStorage").GameData.LatestRoom.Value)]:WaitForChild("Door")
+            for i,v in ipairs(CurrentDoor.Parent:GetDescendants()) do
+                if v.Name == "KeyObtain" then
+                    HasKey = v
+                end
+            end
+            if HasKey then
+                game.Players.LocalPlayer.Character:PivotTo(CF(HasKey.Hitbox.Position))
+                wait(0.3)
+                fireproximityprompt(HasKey.ModulePrompt,0)
+                game.Players.LocalPlayer.Character:PivotTo(CF(CurrentDoor.Door.Position))
+                wait(0.3)
+                fireproximityprompt(CurrentDoor.Lock.UnlockPrompt,0)
+            end
+            if LatestRoom == 50 then
+                CurrentDoor = workspace.CurrentRooms[tostring(LatestRoom+1)]:WaitForChild("Door")
+            end
+            game.Players.LocalPlayer.Character:PivotTo(CF(CurrentDoor.Door.Position))
+            wait(0.3)
+            CurrentDoor.ClientOpen:FireServer()
+        end)
+end)
+
+PlayerSection:Toggle("Auto skip rooms",false, function(SkipRooms)
+_G.SkipRoomss = SkipRooms
+while _G.SkipRoomss do wait()
+    pcall(function()
+            local HasKey = false
+            local CurrentDoor = workspace.CurrentRooms[tostring(game:GetService("ReplicatedStorage").GameData.LatestRoom.Value)]:WaitForChild("Door")
+            for i,v in ipairs(CurrentDoor.Parent:GetDescendants()) do
+                if v.Name == "KeyObtain" then
+                    HasKey = v
+                end
+            end
+            if HasKey then
+                game.Players.LocalPlayer.Character:PivotTo(CF(HasKey.Hitbox.Position))
+                wait(0.3)
+                fireproximityprompt(HasKey.ModulePrompt,0)
+                game.Players.LocalPlayer.Character:PivotTo(CF(CurrentDoor.Door.Position))
+                wait(0.3)
+                fireproximityprompt(CurrentDoor.Lock.UnlockPrompt,0)
+            end
+            if LatestRoom == 50 then
+                CurrentDoor = workspace.CurrentRooms[tostring(LatestRoom+1)]:WaitForChild("Door")
+            end
+            game.Players.LocalPlayer.Character:PivotTo(CF(CurrentDoor.Door.Position))
+            wait(0.3)
+            CurrentDoor.ClientOpen:FireServer()
+    end)
+ end
+end)
+
+PlayerSection:Button("Teleport to key", function()
+        CF = CFrame.new
+        local CurrentDoor = workspace.CurrentRooms[tostring(game:GetService("ReplicatedStorage").GameData.LatestRoom.Value)]:WaitForChild("Door")
+        for i,v in ipairs(CurrentDoor.Parent:GetDescendants()) do
+            if v.Name == "KeyObtain" then
+                game.Players.LocalPlayer.Character:PivotTo(CF(v.Hitbox.Position))
+                fireproximityprompt(v.ModulePrompt)
+            end
+        end
+end)
+
+PlayerSection:Toggle("Remove E wait",false, function(noEwait)
+        getgenv().noEwaits = noEwait
+        PromptButtonHoldBegan = game:GetService("ProximityPromptService").PromptButtonHoldBegan:Connect(function(prompt)
+            if getgenv().noEwaits then
+			fireproximityprompt(prompt)
+            end
+		end)
+end)
+
+PlayerSection:Toggle("Avoid Rush/Ambush",false, function(hide)
+    getgenv().hxde = hide
+workspace.ChildAdded:Connect(function(v)
+    task.wait()
+    if v.Name == "RushMoving" or v.Name == "AmbushMoving" then
+        while workspace:FindFirstChild(v.Name) and getgenv().hxde do
+            task.wait()
+            part = v:WaitForChild("RushNew")
+            game.Players.LocalPlayer.Character.Collision.CFrame = CFrame.new(part.Position + Vector3.new(0,90,80))
+        end
+    end
+end)
+end)
+
+PlayerSection:Toggle("No jumpscares",false, function()
+        pcall(function()
+            game:GetService("ReplicatedStorage").Bricks.Jumpscare:Destroy()
+        end)
+end)
+
+PlayerSection:Toggle("Remove seek arms",false, function(seek)
+    getgenv().removearms = seek
+workspace.DescendantAdded:Connect(function(v)
+    task.wait(0.01)
+    if (string.match(string.lower(v.Name),"seek") or string.match(string.lower(v.Name),"triggerse")) and getgenv().removearms then
+       v:Destroy()
+    end
+end)
+end)
+
+PlayerSection:Toggle("Remove screech damage",false, function(Screech)
+_G.Screechs = Screech
+while _G.Screechs do wait()
+    pcall(function()
+local A_1 = true
+local Event = game:GetService("ReplicatedStorage").Bricks.Screech
+Event:FireServer(A_1)
+    end)
+ end
+end)
+
+PlayerSection:Toggle("Notify events",false, function()
+            local n = ChaseStart.Value - LatestRoom.Value
+            if 0 < n and n < 1 then
+                Notification:Notify(
+    {Title = "Alert", Description = "Event/chase in 1 room."},
+    {OutlineColor = Color3.fromRGB(39, 214, 68), Time = 5, Type = "default"}
+)
+            end
+end)
+
+VisualSection:Toggle("FullBright",false, function(v)
+        if v then
+            game:GetService("Lighting").Brightness = 2
+            game:GetService("Lighting").ClockTime = 14
+            game:GetService("Lighting").FogEnd = 100000
+            game:GetService("Lighting").GlobalShadows = false
+            game:GetService("Lighting").OutdoorAmbient = Color3.fromRGB(128, 128, 128)
+        else
+            game:GetService("Lighting").Brightness = 3
+            game:GetService("Lighting").ClockTime = 20
+            game:GetService("Lighting").FogEnd = 1.1111111533265e+16
+            game:GetService("Lighting").GlobalShadows = true
+            game:GetService("Lighting").OutdoorAmbient = Color3.fromRGB(0.5, 0.5, 0.5)
+        end
+end)
+
+VisualSection:Toggle("ESP Key",false, function(val)
+        keyesp = val
+        if keyesp then
+            repeat task.wait(.25)
+                for i,v in pairs(bullshittable.KeyObtain) do
+                    pcall(function()
+                        if not v.Parent:FindFirstChild("Outline") then
+                            if keyesp then
+                                outline(v.Parent)
+                            end
+                        end
+                    end)
+                end
+            until not keyesp
+        else
+            for i,v in pairs(bullshittable.KeyObtain) do
+                pcall(function()
+                    v.Parent.Outline:Destroy()
+                end)
+            end
+        end
+end)
+
+local leveresp
+VisualSection:Toggle("ESP Lever",false, function(val)
+        leveresp = val
+        if leveresp then
+            repeat task.wait(.25)
+                for i,v in pairs(bullshittable.LeverForGate) do
+                    pcall(function()
+                        if not v.Parent:FindFirstChild("Outline") then
+                            if leveresp then
+                                outline(v.Parent)
+                            end
+                        end
+                    end)
+                end
+            until not leveresp
+        else
+            for i,v in pairs(bullshittable.LeverForGate) do
+                pcall(function()
+                    v.Parent.Outline:Destroy()
+                end)
+            end
+        end
+end)
+local bookesp
+VisualSection:Toggle("ESP Book",false, function(val)
+        bookesp = val
+        if bookesp then
+            repeat task.wait(.25)
+                for i,v in pairs(bullshittable.LiveHintBook) do
+                    pcall(function()
+                        if not v.Parent:FindFirstChild("Outline") then
+                            if bookesp then
+                                outline(v.Parent)
+                            end
+                        end
+                    end)
+                end
+            until not bookesp
+        else
+            for i,v in pairs(bullshittable.LiveHintBook) do
+                pcall(function()
+                    v.Parent.Outline:Destroy()
+                end)
+            end
+        end
+end)
+
+VisualSection:Toggle("ESP Players",false, function(PLAYER)
+_G.God = PLAYER
+while _G.God do wait()
+    pcall(function()
+       for i,v in pairs(game.Players:GetChildren()) do
+            if not v.Character.Head:FindFirstChild("ESP") then
+                local BillboardGui = Instance.new("BillboardGui")
+                local TextLabel = Instance.new("TextLabel")
+                BillboardGui.Parent = v.Character.Head
+                BillboardGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+                BillboardGui.Active = true
+                BillboardGui.Name = "ESP"
+                BillboardGui.AlwaysOnTop = true
+                BillboardGui.LightInfluence = 1.000
+                BillboardGui.Size = UDim2.new(0, 50, 0, 50)
+                BillboardGui.StudsOffset = Vector3.new(0, 2.5, 0)
+                TextLabel.Parent = BillboardGui
+                TextLabel.BackgroundColor3 = Color3.fromRGB(102, 255, 153)
+                TextLabel.BackgroundTransparency = 1.000
+                TextLabel.Size = UDim2.new(0, 50, 0, 50)
+                TextLabel.Font = Enum.Font.GothamBold
+                TextLabel.Text = v.Name
+                TextLabel.TextColor3 = Color3.fromRGB(102, 255, 153)
+                TextLabel.TextScaled = true
+                TextLabel.TextSize = 14.000
+                TextLabel.TextStrokeTransparency = 0.000
+                TextLabel.TextWrapped = true
+            end
+        end
+    end)
+end
+end)
+
+VisualSection:Toggle("Change Fov",false, function(state)
+    if state then
+        game.Workspace.CurrentCamera.FieldOfView = 120
+    else
+        game.Workspace.CurrentCamera.FieldOfView = 80
+    end
+end)
+
+ItemSection:Button("Give crucifix", function()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/Johnny39871/assets/main/crucifixo'))()
+end)
+
+ItemSection:Button("Give Seek crucifix (Execute in PreShop", function()
+local function IsVisible(part)
+    local vec, found=workspace.CurrentCamera:WorldToViewportPoint(part.Position)
+    local onscreen = found and vec.Z > 0
+    local cfg = RaycastParams.new()
+    cfg.FilterType = Enum.RaycastFilterType.Blacklist
+    cfg.FilterDescendantsInstances = {part}
+
+    local cast = workspace:Raycast(part.Position, (game.Players.LocalPlayer.Character.UpperTorso.Position - part.Position), cfg)
+    if onscreen then
+        if cast and (cast and cast.Instance).Parent==game.Players.LocalPlayer.Character then
+            return true
+        end
+    end
+end
+
+local Equipped = false
+
+-- Edit this --
+getgenv().spawnKey = Enum.KeyCode.F4
+---------------
+
+-- Services
+
+local Players = game:GetService("Players")
+local UIS = game:GetService("UserInputService")
+
+-- Variables
+
+local Plr = Players.LocalPlayer
+local Char = Plr.Character or Plr.CharacterAdded:Wait()
+local Hum = Char:WaitForChild("Humanoid")
+local Root = Char:WaitForChild("HumanoidRootPart")
+local RightArm = Char:WaitForChild("RightUpperArm")
+local LeftArm = Char:WaitForChild("LeftUpperArm")
+
+local RightC1 = RightArm.RightShoulder.C1
+local LeftC1 = LeftArm.LeftShoulder.C1
+
+local SelfModules = {
+    Functions = loadstring(
+        game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Functions.lua")
+    )(),
+    CustomShop = loadstring(
+        game:HttpGet(
+            "https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors/Custom%20Shop%20Items/Source.lua"
+        )
+    )(),
+}
+
+local ModuleScripts = {
+    MainGame = require(Plr.PlayerGui.MainUI.Initiator.Main_Game),
+    SeekIntro = require(Plr.PlayerGui.MainUI.Initiator.Main_Game.RemoteListener.Cutscenes.SeekIntro),
+}
+
+-- Functions
+
+local function setupCrucifix(tool)
+    tool.Equipped:Connect(function()
+        Equipped = true
+        Char:SetAttribute("Hiding", true)
+        for _, v in next, Hum:GetPlayingAnimationTracks() do
+            v:Stop()
+        end
+
+        RightArm.Name = "R_Arm"
+        LeftArm.Name = "L_Arm"
+
+        RightArm.RightShoulder.C1 = RightC1 * CFrame.Angles(math.rad(-90), math.rad(-15), 0)
+        LeftArm.LeftShoulder.C1 = LeftC1
+            * CFrame.new(-0.2, -0.3, -0.5)
+            * CFrame.Angles(math.rad(-125), math.rad(25), math.rad(25))
+    end)
+
+    tool.Unequipped:Connect(function()
+        Equipped = false
+        Char:SetAttribute("Hiding", nil)
+        RightArm.Name = "RightUpperArm"
+        LeftArm.Name = "LeftUpperArm"
+
+        RightArm.RightShoulder.C1 = RightC1
+        LeftArm.LeftShoulder.C1 = LeftC1
+    end)
+end
+
+-- Scripts
+
+local CrucifixTool = game:GetObjects("rbxassetid://11879022454")[1]
+CrucifixTool.Name = "Crucifix"
+CrucifixTool.Parent = game.Players.LocalPlayer.Backpack
+
+-- game.UserInputService.InputBegan:Connect(function(input, proc)
+--     if proc then return end
+
+--     if input.KeyCode == input.KeyCode[getgenv().spawnKey] then
+--         local CrucifixTool = game:GetObjects("rbxassetid://11879022454")[1]
+--         CrucifixTool.Name = "Crucifix"
+--         CrucifixTool.Parent = game.Players.LocalPlayer.Backpack
+--     end
+-- end)
+-- Input handler
+
+setupCrucifix(CrucifixTool)
+
+local Players = game:GetService("Players")
+local UIS = game:GetService("UserInputService")
+
+-- Variables
+
+local Plr = Players.LocalPlayer
+local Char = Plr.Character or Plr.CharacterAdded:Wait()
+local Hum = Char:WaitForChild("Humanoid")
+local Root = Char:WaitForChild("HumanoidRootPart")
+
+local dupeCrucifix = Instance.new("BindableEvent")
+local function func(ins)
+    wait(.01) -- Wait for the attribute
+    if ins:GetAttribute("IsCustomEntity")==true and ins:GetAttribute("ClonedByCrucifix")~=true then
+        local Chains = game:GetObjects("rbxassetid://11780381212")[1]
+        Chains.Parent = workspace
+        local chained = true
+        local posTime = false
+        local rotTime = false
+        local tweenTime = false
+        local intFound = true
+
+        game:GetService("RunService").RenderStepped:Connect(function()
+            if Equipped then
+                if ins.Parent~=nil and ins.PrimaryPart and IsVisible(ins.PrimaryPart) and (Root.Position-ins.PrimaryPart.Position).magnitude <= 25 then
+                    local c=ins:Clone()
+                    c:SetAttribute("ClonedByCrucifix", true)
+                    c.RushNew.Anchored=true
+                    c.Parent=ins.Parent
+                    ins:Destroy()
+                    dupeCrucifix:Fire(6,c.RushNew)
+
+
+                    
+                    -- Chains.PrimaryPart.Orientation = Chains.PrimaryPart.Orientation + Vector3.new(0, 3, 0)
+
+                    local EntityRoot = c:FindFirstChild("RushNew")
+
+                    if EntityRoot then
+
+
+
+                        local Fake_FaceAttach = Instance.new("Attachment")
+                        Fake_FaceAttach.Parent = EntityRoot
+                        
+
+                        for i, beam in pairs(Chains:GetDescendants()) do
+                            if beam:IsA("BasePart") then
+                                beam.CanCollide = false
+                            end
+                            if beam.Name == "Beam" then
+                                beam.Attachment1 = Fake_FaceAttach
+                            end
+                        end
+                        
+                        if not posTime then
+                            Chains:SetPrimaryPartCFrame(
+                                EntityRoot.CFrame * CFrame.new(0, -3.5, 0) * CFrame.Angles(math.rad(90), 0, 0)
+                            )
+                            posTime = true
+                        end
+
+                        task.wait(1.35)
+                        if not tweenTime then
+
+                            task.spawn(function()
+                                while task.wait() do
+                                    if Chains:FindFirstChild('Base') then
+                                        Chains.Base.CFrame = Chains.Base.CFrame * CFrame.Angles(0,0 , math.rad(0.5))
+                                    end
+                                end
+                            end)
+
+                            task.spawn(function()
+                                while task.wait() do
+                                    for i, beam in pairs(Chains:GetDescendants()) do
+                                        if beam.Name == "Beam" then
+                                            beam.TextureLength = beam.TextureLength+0.035
+                                        end
+                                    end
+                                end
+                            end)
+
+
+                            game.TweenService
+                                :Create(
+                                    EntityRoot,
+                                    TweenInfo.new(6),
+                                    { CFrame = EntityRoot.CFrame * CFrame.new(0, 50, 0) }
+                                )
+                                :Play()
+                            
+
+                            tweenTime = true
+                            task.wait(1.5)
+                            intFound = false
+                            game:GetService("Debris"):AddItem(c, 0)
+                            game:GetService("Debris"):AddItem(Chains, 0)
+                        end
+                    end
+                end
+            end
+        end)
+    elseif ins.Name=="Lookman" then
+        local c=ins
+        task.spawn(function()
+            repeat task.wait() until IsVisible(c.Core) and Equipped and c.Core.Attachment.Eyes.Enabled==true
+            local pos=c.Core.Position
+            dupeCrucifix:Fire(18.364, c.Core)
+            task.spawn(function()
+                c:SetAttribute("Killing", true)
+                ModuleScripts.MainGame.camShaker:ShakeOnce(10, 10, 5, 0.15)
+                wait(5)
+                c.Core.Initiate:Stop()
+                for i=1,3 do
+                    c.Core.Repent:Play()  
+                    c.Core.Attachment.Angry.Enabled=true
+                    ModuleScripts.MainGame.camShaker:ShakeOnce(8, 8, 1.3, 0.15)
+                    delay(c.Core.Repent.TimeLength, function() c.Core.Attachment.Angry.Enabled=false end)
+                    wait(4)
+                end
+                c.Core.Scream:Play();
+                ModuleScripts.MainGame.camShaker:ShakeOnce(8, 8, c.Core.Scream.TimeLength, 0.15);
+                (c.Core:FindFirstChild"whisper" or c.Core:FindFirstChild"Ambience"):Stop()
+                for _, l in pairs(c:GetDescendants()) do
+                    if l:IsA("PointLight") then
+                        l.Enabled=false
+                    end
+                end
+                game:GetService("TweenService"):Create(c.Core, TweenInfo.new(c.Core.Scream.TimeLength, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut), {
+                    CFrame=CFrame.new(c.Core.CFrame.X, c.Core.CFrame.Y-12, c.Core.CFrame.Z)
+                }):Play()
+            end)
+            local col=game.Players.LocalPlayer.Character.Collision
+
+            local function CFrameToOrientation(cf)
+                local x, y, z = cf:ToOrientation()
+                return Vector3.new(math.deg(x), math.deg(y), math.deg(z))
+            end
+            
+            while c.Parent~=nil and c.Core.Attachment.Eyes.Enabled==true do
+                -- who's the boss now huh?
+                col.Orientation = CFrameToOrientation(CFrame.lookAt(col.Position, pos)*CFrame.Angles(0, math.pi, 0))
+                task.wait()
+            end
+        end)
+    elseif ins.Name=="Shade" and ins.Parent==workspace.CurrentCamera and ins:GetAttribute("ClonedByCrucifix")==nil then
+        task.spawn(function()
+            repeat task.wait() until IsVisible(ins) and (Root.Position-ins.Position).Magnitude <= 12.5 and Equipped
+
+            local clone = ins:Clone()
+
+            clone.CFrame = ins.CFrame
+            clone.Parent = ins.Parent
+            clone.Anchored = true
+
+            ins:Remove()
+
+            dupeCrucifix:Fire(13, ins)
+            ModuleScripts.MainGame.camShaker:ShakeOnce(40, 10, 5, 0.15)
+
+
+
+            for _, thing in pairs(clone:GetDescendants()) do
+                if thing:IsA("SpotLight") then
+                    game:GetService("TweenService"):Create(thing, TweenInfo.new(5), {
+                        Brightness=thing.Brightness*5
+                    }):Play()
+                elseif thing:IsA("Sound") and thing.Name~="Burst" then
+                    game:GetService("TweenService"):Create(thing, TweenInfo.new(5), {
+                        Volume=0
+                    }):Play()
+                elseif thing:IsA("TouchTransmitter") then thing:Destroy() end
+            end
+
+            for _, pc in pairs(clone:GetDescendants()) do
+                if pc:IsA("ParticleEmitter") then
+                        pc.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 0, 4)), ColorSequenceKeypoint.new(0.48, Color3.fromRGB(182, 0, 3)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(255, 0, 4))}
+                end
+            end
+
+            local Original_color = {}
+
+            local light
+            light = game.Lighting["Ambience_Shade"]
+            game:GetService("TweenService"):Create(light, TweenInfo.new(1), {
+
+
+            }):Play()
+
+            wait(5)
+
+            clone.Burst.PlaybackSpeed=0.5
+            clone.Burst:Stop()
+            clone.Burst:Play()
+            light.TintColor = Color3.fromRGB(215,253,255)
+            game:GetService("TweenService"):Create(clone, TweenInfo.new(6), {
+                CFrame=CFrame.new(clone.CFrame.X, clone.CFrame.Y-12, clone.CFrame.Z)
+            }):Play()
+            wait(8.2)
+
+            game:GetService("Debris"):AddItem(clone, 0)
+            game.ReplicatedStorage.Bricks.ShadeResult:FireServer()
+        end)
+    end
+end
+
+workspace.ChildAdded:Connect(func)
+workspace.CurrentCamera.ChildAdded:Connect(func)
+for _, thing in pairs(workspace:GetChildren()) do
+    func(thing)
+end
+dupeCrucifix.Event:Connect(function(time, entityRoot)
+    local Cross = game:GetObjects("rbxassetid://11879022454")[1]
+    Cross.Parent = workspace
+
+    local fakeCross = Cross.Handle
+
+    -- fakeCross:FindFirstChild("EffectLight").Enabled = true
+
+    ModuleScripts.MainGame.camShaker:ShakeOnce(35, 25, 0.15, 0.15)
+    -- you tell me i didnt make?
+    fakeCross.CFrame = CFrame.lookAt(CrucifixTool.Handle.Position, entityRoot.Position)
+    
+    -- hl.Parent = model
+    -- hl.FillTransparency = 1
+    -- hl.OutlineColor = Color3.fromRGB(75, 177, 255)
+    fakeCross.Anchored = true
+
+    CrucifixTool:Destroy()
+
+    -- for i, v in pairs(fakeCross:GetChildren()) do
+    --     if v.Name == "E" and v:IsA("BasePart") then
+    --         v.Transparency = 0
+    --         v.CanCollide = false
+    --     end
+    --     if v:IsA("Motor6D") then
+    --         v.Name = "Motor6D"
+    --     end
+    -- end
+
+    task.wait(time)
+    fakeCross.Anchored = false
+    fakeCross.CanCollide = true
+    task.wait(0.5)
+    Cross:Remove()
+end)
+end)
+
+ItemSection:Button("Give christmas crucifix", function()
+local function IsVisible(part)
+    local vec, found=workspace.CurrentCamera:WorldToViewportPoint(part.Position)
+    local onscreen = found and vec.Z > 0
+    local cfg = RaycastParams.new()
+    cfg.FilterType = Enum.RaycastFilterType.Blacklist
+    cfg.FilterDescendantsInstances = {part}
+
+    local cast = workspace:Raycast(part.Position, (game.Players.LocalPlayer.Character.UpperTorso.Position - part.Position), cfg)
+    if onscreen then
+        if cast and (cast and cast.Instance).Parent==game.Players.LocalPlayer.Character then
+            return true
+        end
+    end
+end
+
+local Equipped = false
+
+-- Edit this --
+getgenv().spawnKey = Enum.KeyCode.F4
+---------------
+
+-- Services
+
+local Players = game:GetService("Players")
+local UIS = game:GetService("UserInputService")
+
+-- Variables
+
+local Plr = Players.LocalPlayer
+local Char = Plr.Character or Plr.CharacterAdded:Wait()
+local Hum = Char:WaitForChild("Humanoid")
+local Root = Char:WaitForChild("HumanoidRootPart")
+local RightArm = Char:WaitForChild("RightUpperArm")
+local LeftArm = Char:WaitForChild("LeftUpperArm")
+
+local RightC1 = RightArm.RightShoulder.C1
+local LeftC1 = LeftArm.LeftShoulder.C1
+
+local SelfModules = {
+    Functions = loadstring(
+        game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Functions.lua")
+    )(),
+    CustomShop = loadstring(
+        game:HttpGet(
+            "https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors/Custom%20Shop%20Items/Source.lua"
+        )
+    )(),
+}
+
+local ModuleScripts = {
+    MainGame = require(Plr.PlayerGui.MainUI.Initiator.Main_Game),
+    SeekIntro = require(Plr.PlayerGui.MainUI.Initiator.Main_Game.RemoteListener.Cutscenes.SeekIntro),
+}
+
+-- Functions
+
+local function setupCrucifix(tool)
+    tool.Equipped:Connect(function()
+        Equipped = true
+        Char:SetAttribute("Hiding", true)
+        for _, v in next, Hum:GetPlayingAnimationTracks() do
+            v:Stop()
+        end
+
+        RightArm.Name = "R_Arm"
+        LeftArm.Name = "L_Arm"
+
+        RightArm.RightShoulder.C1 = RightC1 * CFrame.Angles(math.rad(-90), math.rad(-15), 0)
+        LeftArm.LeftShoulder.C1 = LeftC1
+            * CFrame.new(-0.2, -0.3, -0.5)
+            * CFrame.Angles(math.rad(-125), math.rad(25), math.rad(25))
+    end)
+
+    tool.Unequipped:Connect(function()
+        Equipped = false
+        Char:SetAttribute("Hiding", nil)
+        RightArm.Name = "RightUpperArm"
+        LeftArm.Name = "LeftUpperArm"
+
+        RightArm.RightShoulder.C1 = RightC1
+        LeftArm.LeftShoulder.C1 = LeftC1
+    end)
+end
+
+-- Scripts
+
+local CrucifixTool = game:GetObjects("rbxassetid://11789590444")[1]
+CrucifixTool.Name = "Crucifix"
+CrucifixTool.Parent = game.Players.LocalPlayer.Backpack
+
+-- game.UserInputService.InputBegan:Connect(function(input, proc)
+--     if proc then return end
+
+--     if input.KeyCode == input.KeyCode[getgenv().spawnKey] then
+--         local CrucifixTool = game:GetObjects("rbxassetid://11789590444")[1]
+--         CrucifixTool.Name = "Crucifix"
+--         CrucifixTool.Parent = game.Players.LocalPlayer.Backpack
+--     end
+-- end)
+-- Input handler
+
+setupCrucifix(CrucifixTool)
+
+local Players = game:GetService("Players")
+local UIS = game:GetService("UserInputService")
+
+-- Variables
+
+local Plr = Players.LocalPlayer
+local Char = Plr.Character or Plr.CharacterAdded:Wait()
+local Hum = Char:WaitForChild("Humanoid")
+local Root = Char:WaitForChild("HumanoidRootPart")
+
+local dupeCrucifix = Instance.new("BindableEvent")
+local function func(ins)
+    wait(.01) -- Wait for the attribute
+    if ins:GetAttribute("IsCustomEntity")==true and ins:GetAttribute("ClonedByCrucifix")~=true then
+        local Chains = game:GetObjects("rbxassetid://11736092176")[1]
+        Chains.Parent = workspace
+        local chained = true
+        local posTime = false
+        local rotTime = false
+        local tweenTime = false
+        local intFound = true
+
+        game:GetService("RunService").RenderStepped:Connect(function()
+            if Equipped then
+                if ins.Parent~=nil and ins.PrimaryPart and IsVisible(ins.PrimaryPart) and (Root.Position-ins.PrimaryPart.Position).magnitude <= 25 then
+                    local c=ins:Clone()
+                    c:SetAttribute("ClonedByCrucifix", true)
+                    c.RushNew.Anchored=true
+                    c.Parent=ins.Parent
+                    ins:Destroy()
+                    dupeCrucifix:Fire(6,c.RushNew)
+
+
+                    
+                    -- Chains.PrimaryPart.Orientation = Chains.PrimaryPart.Orientation + Vector3.new(0, 3, 0)
+
+                    local EntityRoot = c:FindFirstChild("RushNew")
+
+                    if EntityRoot then
+
+
+
+                        local Fake_FaceAttach = Instance.new("Attachment")
+                        Fake_FaceAttach.Parent = EntityRoot
+                        
+
+                        for i, beam in pairs(Chains:GetDescendants()) do
+                            if beam:IsA("BasePart") then
+                                beam.CanCollide = false
+                            end
+                            if beam.Name == "Beam" then
+                                beam.Attachment1 = Fake_FaceAttach
+                            end
+                        end
+                        
+                        if not posTime then
+                            Chains:SetPrimaryPartCFrame(
+                                EntityRoot.CFrame * CFrame.new(0, -3.5, 0) * CFrame.Angles(math.rad(90), 0, 0)
+                            )
+                            posTime = true
+                        end
+
+                        task.wait(1.35)
+                        if not tweenTime then
+
+                            task.spawn(function()
+                                while task.wait() do
+                                    if Chains:FindFirstChild('Base') then
+                                        Chains.Base.CFrame = Chains.Base.CFrame * CFrame.Angles(0,0 , math.rad(0.5))
+                                    end
+                                end
+                            end)
+
+                            task.spawn(function()
+                                while task.wait() do
+                                    for i, beam in pairs(Chains:GetDescendants()) do
+                                        if beam.Name == "Beam" then
+                                            beam.TextureLength = beam.TextureLength+0.035
+                                        end
+                                    end
+                                end
+                            end)
+
+
+                            game.TweenService
+                                :Create(
+                                    EntityRoot,
+                                    TweenInfo.new(6),
+                                    { CFrame = EntityRoot.CFrame * CFrame.new(0, 50, 0) }
+                                )
+                                :Play()
+                            
+
+                            tweenTime = true
+                            task.wait(1.5)
+                            intFound = false
+                            game:GetService("Debris"):AddItem(c, 0)
+                            game:GetService("Debris"):AddItem(Chains, 0)
+                        end
+                    end
+                end
+            end
+        end)
+    elseif ins.Name=="Lookman" then
+        local c=ins
+        task.spawn(function()
+            repeat task.wait() until IsVisible(c.Core) and Equipped and c.Core.Attachment.Eyes.Enabled==true
+            local pos=c.Core.Position
+            dupeCrucifix:Fire(18.364, c.Core)
+            task.spawn(function()
+                c:SetAttribute("Killing", true)
+                ModuleScripts.MainGame.camShaker:ShakeOnce(10, 10, 5, 0.15)
+                wait(5)
+                c.Core.Initiate:Stop()
+                for i=1,3 do
+                    c.Core.Repent:Play()  
+                    c.Core.Attachment.Angry.Enabled=true
+                    ModuleScripts.MainGame.camShaker:ShakeOnce(8, 8, 1.3, 0.15)
+                    delay(c.Core.Repent.TimeLength, function() c.Core.Attachment.Angry.Enabled=false end)
+                    wait(4)
+                end
+                c.Core.Scream:Play();
+                ModuleScripts.MainGame.camShaker:ShakeOnce(8, 8, c.Core.Scream.TimeLength, 0.15);
+                (c.Core:FindFirstChild"whisper" or c.Core:FindFirstChild"Ambience"):Stop()
+                for _, l in pairs(c:GetDescendants()) do
+                    if l:IsA("PointLight") then
+                        l.Enabled=false
+                    end
+                end
+                game:GetService("TweenService"):Create(c.Core, TweenInfo.new(c.Core.Scream.TimeLength, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut), {
+                    CFrame=CFrame.new(c.Core.CFrame.X, c.Core.CFrame.Y-12, c.Core.CFrame.Z)
+                }):Play()
+            end)
+            local col=game.Players.LocalPlayer.Character.Collision
+
+            local function CFrameToOrientation(cf)
+                local x, y, z = cf:ToOrientation()
+                return Vector3.new(math.deg(x), math.deg(y), math.deg(z))
+            end
+            
+            while c.Parent~=nil and c.Core.Attachment.Eyes.Enabled==true do
+                -- who's the boss now huh?
+                col.Orientation = CFrameToOrientation(CFrame.lookAt(col.Position, pos)*CFrame.Angles(0, math.pi, 0))
+                task.wait()
+            end
+        end)
+    elseif ins.Name=="Shade" and ins.Parent==workspace.CurrentCamera and ins:GetAttribute("ClonedByCrucifix")==nil then
+        task.spawn(function()
+            repeat task.wait() until IsVisible(ins) and (Root.Position-ins.Position).Magnitude <= 12.5 and Equipped
+
+            local clone = ins:Clone()
+
+            clone.CFrame = ins.CFrame
+            clone.Parent = ins.Parent
+            clone.Anchored = true
+
+            ins:Remove()
+
+            dupeCrucifix:Fire(13, ins)
+            ModuleScripts.MainGame.camShaker:ShakeOnce(40, 10, 5, 0.15)
+
+
+
+            for _, thing in pairs(clone:GetDescendants()) do
+                if thing:IsA("SpotLight") then
+                    game:GetService("TweenService"):Create(thing, TweenInfo.new(5), {
+                        Brightness=thing.Brightness*5
+                    }):Play()
+                elseif thing:IsA("Sound") and thing.Name~="Burst" then
+                    game:GetService("TweenService"):Create(thing, TweenInfo.new(5), {
+                        Volume=0
+                    }):Play()
+                elseif thing:IsA("TouchTransmitter") then thing:Destroy() end
+            end
+
+            for _, pc in pairs(clone:GetDescendants()) do
+                if pc:IsA("ParticleEmitter") then
+                        pc.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 0, 4)), ColorSequenceKeypoint.new(0.48, Color3.fromRGB(182, 0, 3)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(255, 0, 4))}
+                end
+            end
+
+            local Original_color = {}
+
+            local light
+            light = game.Lighting["Ambience_Shade"]
+            game:GetService("TweenService"):Create(light, TweenInfo.new(1), {
+
+
+            }):Play()
+
+            wait(5)
+
+            clone.Burst.PlaybackSpeed=0.5
+            clone.Burst:Stop()
+            clone.Burst:Play()
+            light.TintColor = Color3.fromRGB(215,253,255)
+            game:GetService("TweenService"):Create(clone, TweenInfo.new(6), {
+                CFrame=CFrame.new(clone.CFrame.X, clone.CFrame.Y-12, clone.CFrame.Z)
+            }):Play()
+            wait(8.2)
+
+            game:GetService("Debris"):AddItem(clone, 0)
+            game.ReplicatedStorage.Bricks.ShadeResult:FireServer()
+        end)
+    end
+end
+
+workspace.ChildAdded:Connect(func)
+workspace.CurrentCamera.ChildAdded:Connect(func)
+for _, thing in pairs(workspace:GetChildren()) do
+    func(thing)
+end
+dupeCrucifix.Event:Connect(function(time, entityRoot)
+    local Cross = game:GetObjects("rbxassetid://11789590444")[1]
+    Cross.Parent = workspace
+
+    local fakeCross = Cross.Handle
+
+    -- fakeCross:FindFirstChild("EffectLight").Enabled = true
+
+    ModuleScripts.MainGame.camShaker:ShakeOnce(35, 25, 0.15, 0.15)
+    -- you tell me i didnt make?
+    fakeCross.CFrame = CFrame.lookAt(CrucifixTool.Handle.Position, entityRoot.Position)
+    
+    -- hl.Parent = model
+    -- hl.FillTransparency = 1
+    -- hl.OutlineColor = Color3.fromRGB(75, 177, 255)
+    fakeCross.Anchored = true
+
+    CrucifixTool:Destroy()
+
+    -- for i, v in pairs(fakeCross:GetChildren()) do
+    --     if v.Name == "E" and v:IsA("BasePart") then
+    --         v.Transparency = 0
+    --         v.CanCollide = false
+    --     end
+    --     if v:IsA("Motor6D") then
+    --         v.Name = "Motor6D"
+    --     end
+    -- end
+
+    task.wait(time)
+    fakeCross.Anchored = false
+    fakeCross.CanCollide = true
+    task.wait(0.5)
+    Cross:Remove()
+end)
+end)
+
+ItemSection:Button("Give illuminated crucifix (Execute in PreShop", function()
+local function IsVisible(part)
+	local vec, found=workspace.CurrentCamera:WorldToViewportPoint(part.Position)
+	local onscreen = found and vec.Z > 0
+	local cfg = RaycastParams.new()
+	cfg.FilterType = Enum.RaycastFilterType.Blacklist
+	cfg.FilterDescendantsInstances = {part}
+
+	local cast = workspace:Raycast(part.Position, (game.Players.LocalPlayer.Character.UpperTorso.Position - part.Position), cfg)
+	if onscreen then
+		if cast and (cast and cast.Instance).Parent==game.Players.LocalPlayer.Character then
+			return true
+		end
+	end
+end
+
+local Equipped = false
+
+-- Edit this --
+getgenv().spawnKey = Enum.KeyCode.F4
+---------------
+
+-- Services
+
+local Players = game:GetService("Players")
+local UIS = game:GetService("UserInputService")
+
+-- Variables
+
+local Plr = Players.LocalPlayer
+local Char = Plr.Character or Plr.CharacterAdded:Wait()
+local Hum = Char:WaitForChild("Humanoid")
+local Root = Char:WaitForChild("HumanoidRootPart")
+local RightArm = Char:WaitForChild("RightUpperArm")
+local LeftArm = Char:WaitForChild("LeftUpperArm")
+
+local RightC1 = RightArm.RightShoulder.C1
+local LeftC1 = LeftArm.LeftShoulder.C1
+
+local SelfModules = {
+	Functions = loadstring(
+		game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Functions.lua")
+	)(),
+	CustomShop = loadstring(
+		game:HttpGet(
+			"https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors/Custom%20Shop%20Items/Source.lua"
+		)
+	)(),
+}
+
+local ModuleScripts = {
+	MainGame = require(Plr.PlayerGui.MainUI.Initiator.Main_Game),
+	SeekIntro = require(Plr.PlayerGui.MainUI.Initiator.Main_Game.RemoteListener.Cutscenes.SeekIntro),
+}
+
+-- Functions
+
+local function setupCrucifix(tool)
+	tool.Equipped:Connect(function()
+		Equipped = true
+		Char:SetAttribute("Hiding", true)
+		for _, v in next, Hum:GetPlayingAnimationTracks() do
+			v:Stop()
+		end
+
+		RightArm.Name = "R_Arm"
+		LeftArm.Name = "L_Arm"
+
+		RightArm.RightShoulder.C1 = RightC1 * CFrame.Angles(math.rad(-90), math.rad(-15), 0)
+		LeftArm.LeftShoulder.C1 = LeftC1
+			* CFrame.new(-0.2, -0.3, -0.5)
+			* CFrame.Angles(math.rad(-125), math.rad(25), math.rad(25))
+	end)
+
+	tool.Unequipped:Connect(function()
+		Equipped = false
+		Char:SetAttribute("Hiding", nil)
+		RightArm.Name = "RightUpperArm"
+		LeftArm.Name = "LeftUpperArm"
+
+		RightArm.RightShoulder.C1 = RightC1
+		LeftArm.LeftShoulder.C1 = LeftC1
+	end)
+end
+
+-- Scripts
+
+local CrucifixTool = game:GetObjects("rbxassetid://11745580468")[1]
+CrucifixTool.Name = "NewCrucifix"
+CrucifixTool.Parent = game.Players.LocalPlayer.Backpack
+
+-- game.UserInputService.InputBegan:Connect(function(input, proc)
+--     if proc then return end
+
+--     if input.KeyCode == input.KeyCode[getgenv().spawnKey] then
+--         local CrucifixTool = game:GetObjects("rbxassetid://11590476113")[1]
+--         CrucifixTool.Name = "Crucifix"
+--         CrucifixTool.Parent = game.Players.LocalPlayer.Backpack
+--     end
+-- end)
+-- Input handler
+
+setupCrucifix(CrucifixTool)
+
+local Players = game:GetService("Players")
+local UIS = game:GetService("UserInputService")
+
+-- Variables
+
+local Plr = Players.LocalPlayer
+local Char = Plr.Character or Plr.CharacterAdded:Wait()
+local Hum = Char:WaitForChild("Humanoid")
+local Root = Char:WaitForChild("HumanoidRootPart")
+
+local dupeCrucifix = Instance.new("BindableEvent")
+local function func(ins)
+	wait(.01) -- Wait for the attribute
+	if ins:GetAttribute("IsCustomEntity")==true and ins:GetAttribute("ClonedByCrucifix")~=true then
+		local Chains = game:GetObjects("rbxassetid://11767952745")[1]
+		Chains.Parent = workspace
+		local chained = true
+		local posTime = false
+		local rotTime = false
+		local tweenTime = false
+		local intFound = true
+
+		game:GetService("RunService").RenderStepped:Connect(function()
+			if Equipped then
+				if ins.Parent~=nil and ins.PrimaryPart and IsVisible(ins.PrimaryPart) and (Root.Position-ins.PrimaryPart.Position).magnitude <= 25 then
+					local c=ins:Clone()
+					c:SetAttribute("ClonedByCrucifix", true)
+					c.RushNew.Anchored=true
+					c.Parent=ins.Parent
+					ins:Destroy()
+					dupeCrucifix:Fire(6,c.RushNew)
+
+
+
+					-- Chains.PrimaryPart.Orientation = Chains.PrimaryPart.Orientation + Vector3.new(0, 3, 0)
+
+					local EntityRoot = c:FindFirstChild("RushNew")
+
+					if EntityRoot then
+
+
+
+						local Fake_FaceAttach = Instance.new("Attachment")
+						Fake_FaceAttach.Parent = EntityRoot
+
+
+						for i, beam in pairs(Chains:GetDescendants()) do
+							if beam:IsA("BasePart") then
+								beam.CanCollide = false
+							end
+							if beam.Name == "Beam" then
+								beam.Attachment1 = Fake_FaceAttach
+							end
+						end
+
+						if not posTime then
+							Chains:SetPrimaryPartCFrame(
+								EntityRoot.CFrame * CFrame.new(0, -3.5, 0) * CFrame.Angles(math.rad(90), 0, 0)
+							)
+							posTime = true
+						end
+
+						task.wait(1.35)
+						if not tweenTime then
+
+							task.spawn(function()
+								while task.wait() do
+									if Chains:FindFirstChild('Base') then
+										Chains.Base.CFrame = Chains.Base.CFrame * CFrame.Angles(0,0 , math.rad(0.5))
+									end
+								end
+							end)
+
+							task.spawn(function()
+								while task.wait() do
+									for i, beam in pairs(Chains:GetDescendants()) do
+										if beam.Name == "Beam" then
+											beam.TextureLength = beam.TextureLength+0.035
+										end
+									end
+								end
+							end)
+
+
+							game.TweenService
+							:Create(
+								EntityRoot,
+								TweenInfo.new(6),
+								{ CFrame = EntityRoot.CFrame * CFrame.new(0, 50, 0) }
+							)
+							:Play()
+
+
+							tweenTime = true
+							task.wait(1.5)
+							intFound = false
+							game:GetService("Debris"):AddItem(c, 0)
+							game:GetService("Debris"):AddItem(Chains, 0)
+						end
+					end
+				end
+			end
+		end)
+	elseif ins.Name=="Lookman" then
+		local c=ins
+		task.spawn(function()
+			repeat task.wait() until IsVisible(c.Core) and Equipped and c.Core.Attachment.Eyes.Enabled==true
+			local pos=c.Core.Position
+			dupeCrucifix:Fire(18.364, c.Core)
+			task.spawn(function()
+				c:SetAttribute("Killing", true)
+				ModuleScripts.MainGame.camShaker:ShakeOnce(10, 10, 5, 0.15)
+				wait(5)
+				c.Core.Initiate:Stop()
+				for i=1,3 do
+					c.Core.Repent:Play()  
+					c.Core.Attachment.Angry.Enabled=true
+					ModuleScripts.MainGame.camShaker:ShakeOnce(8, 8, 1.3, 0.15)
+					delay(c.Core.Repent.TimeLength, function() c.Core.Attachment.Angry.Enabled=false end)
+					wait(4)
+				end
+				c.Core.Scream:Play();
+				ModuleScripts.MainGame.camShaker:ShakeOnce(8, 8, c.Core.Scream.TimeLength, 0.15);
+				(c.Core:FindFirstChild"whisper" or c.Core:FindFirstChild"Ambience"):Stop()
+				for _, l in pairs(c:GetDescendants()) do
+					if l:IsA("PointLight") then
+						l.Enabled=false
+					end
+				end
+				game:GetService("TweenService"):Create(c.Core, TweenInfo.new(c.Core.Scream.TimeLength, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut), {
+					CFrame=CFrame.new(c.Core.CFrame.X, c.Core.CFrame.Y-12, c.Core.CFrame.Z)
+				}):Play()
+			end)
+			local col=game.Players.LocalPlayer.Character.Collision
+
+			local function CFrameToOrientation(cf)
+				local x, y, z = cf:ToOrientation()
+				return Vector3.new(math.deg(x), math.deg(y), math.deg(z))
+			end
+
+			while c.Parent~=nil and c.Core.Attachment.Eyes.Enabled==true do
+				-- who's the boss now huh?
+				col.Orientation = CFrameToOrientation(CFrame.lookAt(col.Position, pos)*CFrame.Angles(0, math.pi, 0))
+				task.wait()
+			end
+		end)
+	elseif ins.Name=="Shade" and ins.Parent==workspace.CurrentCamera and ins:GetAttribute("ClonedByCrucifix")==nil then
+		task.spawn(function()
+			repeat task.wait() until IsVisible(ins) and (Root.Position-ins.Position).Magnitude <= 12.5 and Equipped
+
+			local clone = ins:Clone()
+
+			clone.CFrame = ins.CFrame
+			clone.Parent = ins.Parent
+			clone.Anchored = true
+
+			ins:Remove()
+
+			dupeCrucifix:Fire(13, ins)
+			ModuleScripts.MainGame.camShaker:ShakeOnce(40, 10, 5, 0.15)
+
+
+
+			for _, thing in pairs(clone:GetDescendants()) do
+				if thing:IsA("SpotLight") then
+					game:GetService("TweenService"):Create(thing, TweenInfo.new(5), {
+						Brightness=thing.Brightness*5
+					}):Play()
+				elseif thing:IsA("Sound") and thing.Name~="Burst" then
+					game:GetService("TweenService"):Create(thing, TweenInfo.new(5), {
+						Volume=0
+					}):Play()
+				elseif thing:IsA("TouchTransmitter") then thing:Destroy() end
+			end
+
+			for _, pc in pairs(clone:GetDescendants()) do
+				if pc:IsA("ParticleEmitter") then
+					pc.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 0, 4)), ColorSequenceKeypoint.new(0.48, Color3.fromRGB(182, 0, 3)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(255, 0, 4))}
+				end
+			end
+
+			local Original_color = {}
+
+			local light
+			light = game.Lighting["Ambience_Shade"]
+			game:GetService("TweenService"):Create(light, TweenInfo.new(1), {
+
+
+			}):Play()
+
+			wait(5)
+
+			clone.Burst.PlaybackSpeed=0.5
+			clone.Burst:Stop()
+			clone.Burst:Play()
+			light.TintColor = Color3.fromRGB(215,253,255)
+			game:GetService("TweenService"):Create(clone, TweenInfo.new(6), {
+				CFrame=CFrame.new(clone.CFrame.X, clone.CFrame.Y-12, clone.CFrame.Z)
+			}):Play()
+			wait(8.2)
+
+			game:GetService("Debris"):AddItem(clone, 0)
+			game.ReplicatedStorage.Bricks.ShadeResult:FireServer()
+		end)
+	end
+end
+
+workspace.ChildAdded:Connect(func)
+workspace.CurrentCamera.ChildAdded:Connect(func)
+for _, thing in pairs(workspace:GetChildren()) do
+	func(thing)
+end
+dupeCrucifix.Event:Connect(function(time, entityRoot)
+	local Cross = game:GetObjects("rbxassetid://11767856854")[1]
+	Cross.Parent = workspace
+
+	local fakeCross = Cross.Handle
+
+	-- fakeCross:FindFirstChild("EffectLight").Enabled = true
+
+	ModuleScripts.MainGame.camShaker:ShakeOnce(35, 25, 0.15, 0.15)
+	-- you tell me i didnt make?
+	fakeCross.CFrame = CFrame.lookAt(CrucifixTool.Handle.Position, entityRoot.Position)
+
+	-- hl.Parent = model
+	-- hl.FillTransparency = 1
+	-- hl.OutlineColor = Color3.fromRGB(75, 177, 255)
+	fakeCross.Anchored = true
+
+	CrucifixTool:Destroy()
+
+	-- for i, v in pairs(fakeCross:GetChildren()) do
+	--     if v.Name == "E" and v:IsA("BasePart") then
+	--         v.Transparency = 0
+	--         v.CanCollide = false
+	--     end
+	--     if v:IsA("Motor6D") then
+	--         v.Name = "Motor6D"
+	--     end
+	-- end
+
+	task.wait(time)
+	fakeCross.Anchored = false
+	fakeCross.CanCollide = true
+	task.wait(0.5)
+	Cross:Remove()
+end)
+
+-- i love balls, they smell very good ðŸ™€ðŸ™€ðŸ™€
+end)
+
+ItemSection:Button("Money Tool", function()
+local Item = game:GetObjects("rbxassetid://7080588212")[1]
+Item.Parent = game.Players.LocalPlayer.Backpack
+--// New Crucifix (Execute in prerun shop)
+function FullVersion() do
+
+local Functions = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Functions.lua"))()
+
+-- Create your tool here
+
+local exampleTool = game:GetObjects("rbxassetid://7080588212")[1]
+
+exampleTool.Parent = game.Players.LocalPlayer.Backpack
+
+local Players = game:GetService("Players")
+
+local UIS = game:GetService("UserInputService")
+
+local tool = exampleTool
+
+local Plr = Players.LocalPlayer
+
+local Char = Plr.Character or Plr.CharacterAdded:Wait()
+
+local Hum = Char:WaitForChild("Humanoid")
+
+local RightArm = Char:WaitForChild("RightUpperArm")
+
+local LeftArm = Char:WaitForChild("LeftUpperArm")
+
+local RightC1 = RightArm.RightShoulder.C1
+
+local LeftC1 = LeftArm.LeftShoulder.C1
+
+        local function setupCrucifix(tool)
+
+        RightArm.Name = "R_Arm"
+
+        LeftArm.Name = "L_Arm"
+
+        
+
+        RightArm.RightShoulder.C1 = RightC1 * CFrame.Angles(math.rad(-90), math.rad(-15), 0)
+
+        LeftArm.LeftShoulder.C1 = LeftC1 * CFrame.new(-0.2, -0.3, -0.5) * CFrame.Angles(math.rad(-125), math.rad(25), math.rad(25))
+
+        for _, v in next, Hum:GetPlayingAnimationTracks() do
+
+            v:Stop()
+
+        end
+
+        end
+
+tool.Equipped:Connect(function()
+
+    setupCrucifix(exampleTool)
+
+    game.Players.LocalPlayer:SetAttribute("Hidden", true)
+
+	UIS.InputBegan:Connect(function(input)	    if input.UserInputType == Enum.UserInputType.MouseButton1 then
+
+		    if tool.Parent == game.Players.LocalPlayer.Character then
+
+                   if game.Workspace:FindFirstChild("Lookman") then
+
+                      local eyes = game.Workspace:FindFirstChild("Lookman").Core
+
+                      local crucifixed = Instance.new("BoolValue")
+
+                      crucifixed.Parent = eyes
+
+                      crucifixed.Name = "GettingCrucifixed"
+
+                      eyes.Ambience.Playing = false
+
+                      eyes.Repent.Looped = true
+
+                      eyes.Repent:Play()
+
+                      local CameraShaker = require(game.ReplicatedStorage.CameraShaker)
+
+local camara = game.Workspace.CurrentCamera
+
+local camShake = CameraShaker.new(Enum.RenderPriority.Camera.Value, function(shakeCf)
+
+camara.CFrame = camara.CFrame * shakeCf
+
+end)
+
+camShake:Start()
+
+camShake:ShakeOnce(3.5, 10, 0.1, 1.5)
+
+wait(1.2)
+
+                      local CameraShaker = require(game.ReplicatedStorage.CameraShaker)
+
+local camara = game.Workspace.CurrentCamera
+
+local camShake = CameraShaker.new(Enum.RenderPriority.Camera.Value, function(shakeCf)
+
+camara.CFrame = camara.CFrame * shakeCf
+
+end)
+
+camShake:Start()
+
+camShake:ShakeOnce(3.5, 10, 0.1, 1.5)
+
+wait(1.2)
+
+local CameraShaker = require(game.ReplicatedStorage.CameraShaker)
+
+local camara = game.Workspace.CurrentCamera
+
+local camShake = CameraShaker.new(Enum.RenderPriority.Camera.Value, function(shakeCf)
+
+camara.CFrame = camara.CFrame * shakeCf
+
+end)
+
+camShake:Start()
+
+camShake:ShakeOnce(3.5, 10, 0.1, 1.5)
+
+wait(1.2)
+
+local CameraShaker = require(game.ReplicatedStorage.CameraShaker)
+
+local camara = game.Workspace.CurrentCamera
+
+local camShake = CameraShaker.new(Enum.RenderPriority.Camera.Value, function(shakeCf)
+
+camara.CFrame = camara.CFrame * shakeCf
+
+end)
+
+camShake:Start()
+
+camShake:ShakeOnce(3.5, 10, 0.1, 1.5)
+
+                      wait(1.2)
+
+                      local ClonedMesh = tool.NewOneBro:Clone()
+
+                      ClonedMesh.Parent = game.Workspace
+
+                      ClonedMesh.Anchored = true
+
+                      tool:Destroy()
+
+                      eyes.Repent.Playing = false
+
+                      eyes.Scream:Play()
+
+                      eyes.PointLight.Enabled = false
+
+                      eyes.PointLight.Enabled = false
+
+                      local CameraShaker = require(game.ReplicatedStorage.CameraShaker)
+
+local camara = game.Workspace.CurrentCamera
+
+local camShake = CameraShaker.new(Enum.RenderPriority.Camera.Value, function(shakeCf)
+
+camara.CFrame = camara.CFrame * shakeCf
+
+end)
+
+camShake:Start()
+
+camShake:ShakeOnce(6, 10, 0.1, 4.5)
+
+                      loadstring(game:HttpGet(("https://raw.githubusercontent.com/lolthatseazy/KillEyes/main/Source.lua"),true))()
+
+                      wait(0.3)
+
+                      game.Workspace:FindFirstChild("Lookman"):Destroy()
+
+               end
+
+               end
+
+              end
+
+	end)
+
+    end)
+
+tool.Unequipped:Connect(function()
+
+    game.Players.LocalPlayer:SetAttribute("Hidden", false)
+
+        RightArm.Name = "RightUpperArm"
+
+        LeftArm.Name = "LeftUpperArm"
+
+        
+
+        RightArm.RightShoulder.C1 = RightC1
+
+        LeftArm.LeftShoulder.C1 = LeftC1
+
+end)
+
+local Unlock = require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Lobby.RemoteListener.Modules.AchievementUnlock)
+
+local Achievements = debug.getupvalue(Unlock, 1)
+
+local custom = {
+
+    Title = "Christmas Screech Plushie", 
+
+    Desc = "Damn, the christmas screech plushie",  --first line
+
+    Reason = "You got the christmas screech plushie, somehow.", --change this for second line of the badgs desc
+
+    BadgeId = 43566570, --change badge id for image
+
+    Category = 0,
+
+}
+
+local old = {}
+
+for i, v in next, Achievements.Join do
+
+    old[i] = v
+
+end
+
+for i, v in next, custom do
+
+    Achievements.Join[i] = v
+
+end
+
+Unlock(nil, "Join")
+
+for i, v in next, old do
+
+    Achievements.Join[i] = v
+
+end
+
+end
+
+end
+
+FullVersion()
+end)
+
+ItemSection:Button("Flashlight Tool", function()
+local Item = game:GetObjects("rbxassetid://10093563208")[1]
+Item.Parent = game.Players.LocalPlayer.Backpack
+--// New Crucifix (Execute in prerun shop)
+function FullVersion() do
+
+local Functions = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Functions.lua"))()
+
+-- Create your tool here
+
+local exampleTool = game:GetObjects("rbxassetid://10093563208")[1]
+
+exampleTool.Parent = game.Players.LocalPlayer.Backpack
+
+local Players = game:GetService("Players")
+
+local UIS = game:GetService("UserInputService")
+
+local tool = exampleTool
+
+local Plr = Players.LocalPlayer
+
+local Char = Plr.Character or Plr.CharacterAdded:Wait()
+
+local Hum = Char:WaitForChild("Humanoid")
+
+local RightArm = Char:WaitForChild("RightUpperArm")
+
+local LeftArm = Char:WaitForChild("LeftUpperArm")
+
+local RightC1 = RightArm.RightShoulder.C1
+
+local LeftC1 = LeftArm.LeftShoulder.C1
+
+        local function setupCrucifix(tool)
+
+        RightArm.Name = "R_Arm"
+
+        LeftArm.Name = "L_Arm"
+
+        
+
+        RightArm.RightShoulder.C1 = RightC1 * CFrame.Angles(math.rad(-90), math.rad(-15), 0)
+
+        LeftArm.LeftShoulder.C1 = LeftC1 * CFrame.new(-0.2, -0.3, -0.5) * CFrame.Angles(math.rad(-125), math.rad(25), math.rad(25))
+
+        for _, v in next, Hum:GetPlayingAnimationTracks() do
+
+            v:Stop()
+
+        end
+
+        end
+
+tool.Equipped:Connect(function()
+
+    setupCrucifix(exampleTool)
+
+    game.Players.LocalPlayer:SetAttribute("Hidden", true)
+
+	UIS.InputBegan:Connect(function(input)	    if input.UserInputType == Enum.UserInputType.MouseButton1 then
+
+		    if tool.Parent == game.Players.LocalPlayer.Character then
+
+                   if game.Workspace:FindFirstChild("Lookman") then
+
+                      local eyes = game.Workspace:FindFirstChild("Lookman").Core
+
+                      local crucifixed = Instance.new("BoolValue")
+
+                      crucifixed.Parent = eyes
+
+                      crucifixed.Name = "GettingCrucifixed"
+
+                      eyes.Ambience.Playing = false
+
+                      eyes.Repent.Looped = true
+
+                      eyes.Repent:Play()
+
+                      local CameraShaker = require(game.ReplicatedStorage.CameraShaker)
+
+local camara = game.Workspace.CurrentCamera
+
+local camShake = CameraShaker.new(Enum.RenderPriority.Camera.Value, function(shakeCf)
+
+camara.CFrame = camara.CFrame * shakeCf
+
+end)
+
+camShake:Start()
+
+camShake:ShakeOnce(3.5, 10, 0.1, 1.5)
+
+wait(1.2)
+
+                      local CameraShaker = require(game.ReplicatedStorage.CameraShaker)
+
+local camara = game.Workspace.CurrentCamera
+
+local camShake = CameraShaker.new(Enum.RenderPriority.Camera.Value, function(shakeCf)
+
+camara.CFrame = camara.CFrame * shakeCf
+
+end)
+
+camShake:Start()
+
+camShake:ShakeOnce(3.5, 10, 0.1, 1.5)
+
+wait(1.2)
+
+local CameraShaker = require(game.ReplicatedStorage.CameraShaker)
+
+local camara = game.Workspace.CurrentCamera
+
+local camShake = CameraShaker.new(Enum.RenderPriority.Camera.Value, function(shakeCf)
+
+camara.CFrame = camara.CFrame * shakeCf
+
+end)
+
+camShake:Start()
+
+camShake:ShakeOnce(3.5, 10, 0.1, 1.5)
+
+wait(1.2)
+
+local CameraShaker = require(game.ReplicatedStorage.CameraShaker)
+
+local camara = game.Workspace.CurrentCamera
+
+local camShake = CameraShaker.new(Enum.RenderPriority.Camera.Value, function(shakeCf)
+
+camara.CFrame = camara.CFrame * shakeCf
+
+end)
+
+camShake:Start()
+
+camShake:ShakeOnce(3.5, 10, 0.1, 1.5)
+
+                      wait(1.2)
+
+                      local ClonedMesh = tool.NewOneBro:Clone()
+
+                      ClonedMesh.Parent = game.Workspace
+
+                      ClonedMesh.Anchored = true
+
+                      tool:Destroy()
+
+                      eyes.Repent.Playing = false
+
+                      eyes.Scream:Play()
+
+                      eyes.PointLight.Enabled = false
+
+                      eyes.PointLight.Enabled = false
+
+                      local CameraShaker = require(game.ReplicatedStorage.CameraShaker)
+
+local camara = game.Workspace.CurrentCamera
+
+local camShake = CameraShaker.new(Enum.RenderPriority.Camera.Value, function(shakeCf)
+
+camara.CFrame = camara.CFrame * shakeCf
+
+end)
+
+camShake:Start()
+
+camShake:ShakeOnce(6, 10, 0.1, 4.5)
+
+                      loadstring(game:HttpGet(("https://raw.githubusercontent.com/lolthatseazy/KillEyes/main/Source.lua"),true))()
+
+                      wait(0.3)
+
+                      game.Workspace:FindFirstChild("Lookman"):Destroy()
+
+               end
+
+               end
+
+              end
+
+	end)
+
+    end)
+
+tool.Unequipped:Connect(function()
+
+    game.Players.LocalPlayer:SetAttribute("Hidden", false)
+
+        RightArm.Name = "RightUpperArm"
+
+        LeftArm.Name = "LeftUpperArm"
+
+        
+
+        RightArm.RightShoulder.C1 = RightC1
+
+        LeftArm.LeftShoulder.C1 = LeftC1
+
+end)
+
+local Unlock = require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Lobby.RemoteListener.Modules.AchievementUnlock)
+
+local Achievements = debug.getupvalue(Unlock, 1)
+
+local custom = {
+
+    Title = "Christmas Screech Plushie", 
+
+    Desc = "Damn, the christmas screech plushie",  --first line
+
+    Reason = "You got the christmas screech plushie, somehow.", --change this for second line of the badgs desc
+
+    BadgeId = 43566570, --change badge id for image
+
+    Category = 0,
+
+}
+
+local old = {}
+
+for i, v in next, Achievements.Join do
+
+    old[i] = v
+
+end
+
+for i, v in next, custom do
+
+    Achievements.Join[i] = v
+
+end
+
+Unlock(nil, "Join")
+
+for i, v in next, old do
+
+    Achievements.Join[i] = v
+
+end
+
+end
+
+end
+
+FullVersion()
+end)
+
+ItemSection:Button("Christmas gun (Execute in PreShop)", function()
+local Functions = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Functions.lua"))()
+    local CustomShop = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors/Custom%20Shop%20Items/Source.lua"))()
+
+    local exampleTool = game:GetObjects("rbxassetid://11581313606")[1]
+
+    exampleTool.Parent = game.Players.LocalPlayer.Backpack
+
+    local UIS = game:GetService("UserInputService")
+    local tool = exampleTool
+
+    local anim = Instance.new("Animation")
+    anim.Name = "M249Idle"
+    anim.AnimationId = "rbxassetid://3034291703"
+    local track = game.Players.LocalPlayer.Character.Humanoid:LoadAnimation(anim)
+
+    tool.Equipped:Connect(function()
+        track.Priority = Enum.AnimationPriority.Movement
+        track.Looped = true
+        track:Play()
+        end)
+
+
+    UIS.InputBegan:Connect(function(input)
+            if tool.Parent == game.Players.LocalPlayer.Character then
+                if input.UserInputType == Enum.UserInputType.MouseButton1 then
+                    local bullet = LoadCustomInstance("rbxassetid://11581381399") --The *bullet model id*
+                    local HRP = tool.BulletPart
+                    local Attachment = Instance.new("Attachment", bullet)
+                    local LV = Instance.new("LinearVelocity", Attachment) -- creating the linear velocity
+                    LV.MaxForce = math.huge -- no need to worry about this
+                    LV.VectorVelocity = HRP.CFrame.lookVector * 100 -- change 100 with how fast you want the projectile to go
+                    LV.Attachment0 = Attachment --Required Attachment
+                    bullet.Parent = game.Workspace
+                    bullet.CFrame = tool.BulletPart.CFrame
+                    tool.Handle.Fire:Play()
+                    wait(1)
+                    LV:Destroy()
+                    wait(10)
+                    bullet:Destroy()
+            end   
+        end
+end)
+    tool.Unequipped:Connect(function()
+        if track then
+            track:Stop()
+    end
+    end)
+end)
+
+ItemSection:Button("Christmas screech Plush", function()
+local Item = game:GetObjects("rbxassetid://11980064197")[1]
+Item.Parent = game.Players.LocalPlayer.Backpack
+--// New Crucifix (Execute in prerun shop)
+function FullVersion() do
+
+local Functions = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Functions.lua"))()
+
+-- Create your tool here
+
+local exampleTool = game:GetObjects("rbxassetid://11980064197")[1]
+
+exampleTool.Parent = game.Players.LocalPlayer.Backpack
+
+local Players = game:GetService("Players")
+
+local UIS = game:GetService("UserInputService")
+
+local tool = exampleTool
+
+local Plr = Players.LocalPlayer
+
+local Char = Plr.Character or Plr.CharacterAdded:Wait()
+
+local Hum = Char:WaitForChild("Humanoid")
+
+local RightArm = Char:WaitForChild("RightUpperArm")
+
+local LeftArm = Char:WaitForChild("LeftUpperArm")
+
+local RightC1 = RightArm.RightShoulder.C1
+
+local LeftC1 = LeftArm.LeftShoulder.C1
+
+        local function setupCrucifix(tool)
+
+        RightArm.Name = "R_Arm"
+
+        LeftArm.Name = "L_Arm"
+
+        
+
+        RightArm.RightShoulder.C1 = RightC1 * CFrame.Angles(math.rad(-90), math.rad(-15), 0)
+
+        LeftArm.LeftShoulder.C1 = LeftC1 * CFrame.new(-0.2, -0.3, -0.5) * CFrame.Angles(math.rad(-125), math.rad(25), math.rad(25))
+
+        for _, v in next, Hum:GetPlayingAnimationTracks() do
+
+            v:Stop()
+
+        end
+
+        end
+
+tool.Equipped:Connect(function()
+
+    setupCrucifix(exampleTool)
+
+    game.Players.LocalPlayer:SetAttribute("Hidden", true)
+
+	UIS.InputBegan:Connect(function(input)	    if input.UserInputType == Enum.UserInputType.MouseButton1 then
+
+		    if tool.Parent == game.Players.LocalPlayer.Character then
+
+                   if game.Workspace:FindFirstChild("Lookman") then
+
+                      local eyes = game.Workspace:FindFirstChild("Lookman").Core
+
+                      local crucifixed = Instance.new("BoolValue")
+
+                      crucifixed.Parent = eyes
+
+                      crucifixed.Name = "GettingCrucifixed"
+
+                      eyes.Ambience.Playing = false
+
+                      eyes.Repent.Looped = true
+
+                      eyes.Repent:Play()
+
+                      local CameraShaker = require(game.ReplicatedStorage.CameraShaker)
+
+local camara = game.Workspace.CurrentCamera
+
+local camShake = CameraShaker.new(Enum.RenderPriority.Camera.Value, function(shakeCf)
+
+camara.CFrame = camara.CFrame * shakeCf
+
+end)
+
+camShake:Start()
+
+camShake:ShakeOnce(3.5, 10, 0.1, 1.5)
+
+wait(1.2)
+
+                      local CameraShaker = require(game.ReplicatedStorage.CameraShaker)
+
+local camara = game.Workspace.CurrentCamera
+
+local camShake = CameraShaker.new(Enum.RenderPriority.Camera.Value, function(shakeCf)
+
+camara.CFrame = camara.CFrame * shakeCf
+
+end)
+
+camShake:Start()
+
+camShake:ShakeOnce(3.5, 10, 0.1, 1.5)
+
+wait(1.2)
+
+local CameraShaker = require(game.ReplicatedStorage.CameraShaker)
+
+local camara = game.Workspace.CurrentCamera
+
+local camShake = CameraShaker.new(Enum.RenderPriority.Camera.Value, function(shakeCf)
+
+camara.CFrame = camara.CFrame * shakeCf
+
+end)
+
+camShake:Start()
+
+camShake:ShakeOnce(3.5, 10, 0.1, 1.5)
+
+wait(1.2)
+
+local CameraShaker = require(game.ReplicatedStorage.CameraShaker)
+
+local camara = game.Workspace.CurrentCamera
+
+local camShake = CameraShaker.new(Enum.RenderPriority.Camera.Value, function(shakeCf)
+
+camara.CFrame = camara.CFrame * shakeCf
+
+end)
+
+camShake:Start()
+
+camShake:ShakeOnce(3.5, 10, 0.1, 1.5)
+
+                      wait(1.2)
+
+                      local ClonedMesh = tool.NewOneBro:Clone()
+
+                      ClonedMesh.Parent = game.Workspace
+
+                      ClonedMesh.Anchored = true
+
+                      tool:Destroy()
+
+                      eyes.Repent.Playing = false
+
+                      eyes.Scream:Play()
+
+                      eyes.PointLight.Enabled = false
+
+                      eyes.PointLight.Enabled = false
+
+                      local CameraShaker = require(game.ReplicatedStorage.CameraShaker)
+
+local camara = game.Workspace.CurrentCamera
+
+local camShake = CameraShaker.new(Enum.RenderPriority.Camera.Value, function(shakeCf)
+
+camara.CFrame = camara.CFrame * shakeCf
+
+end)
+
+camShake:Start()
+
+camShake:ShakeOnce(6, 10, 0.1, 4.5)
+
+                      loadstring(game:HttpGet(("https://raw.githubusercontent.com/lolthatseazy/KillEyes/main/Source.lua"),true))()
+
+                      wait(0.3)
+
+                      game.Workspace:FindFirstChild("Lookman"):Destroy()
+
+               end
+
+               end
+
+              end
+
+	end)
+
+    end)
+
+tool.Unequipped:Connect(function()
+
+    game.Players.LocalPlayer:SetAttribute("Hidden", false)
+
+        RightArm.Name = "RightUpperArm"
+
+        LeftArm.Name = "LeftUpperArm"
+
+        
+
+        RightArm.RightShoulder.C1 = RightC1
+
+        LeftArm.LeftShoulder.C1 = LeftC1
+
+end)
+
+local Unlock = require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Lobby.RemoteListener.Modules.AchievementUnlock)
+
+local Achievements = debug.getupvalue(Unlock, 1)
+
+local custom = {
+
+    Title = "Christmas Screech Plushie", 
+
+    Desc = "Damn, the christmas screech plushie",  --first line
+
+    Reason = "You got the christmas screech plushie, somehow.", --change this for second line of the badgs desc
+
+    BadgeId = 43566570, --change badge id for image
+
+    Category = 0,
+
+}
+
+local old = {}
+
+for i, v in next, Achievements.Join do
+
+    old[i] = v
+
+end
+
+for i, v in next, custom do
+
+    Achievements.Join[i] = v
+
+end
+
+Unlock(nil, "Join")
+
+for i, v in next, old do
+
+    Achievements.Join[i] = v
+
+end
+
+end
+
+end
+
+FullVersion()
+end)
+
+ItemSection:Button("Jack in closet Plushie", function()
+local Item = game:GetObjects("rbxassetid://11996695916")[1]
+Item.Parent = game.Players.LocalPlayer.Backpack
+--// New Crucifix (Execute in prerun shop)
+function FullVersion() do
+
+local Functions = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Functions.lua"))()
+
+-- Create your tool here
+
+local exampleTool = game:GetObjects("rbxassetid://11996695916")[1]
+
+exampleTool.Parent = game.Players.LocalPlayer.Backpack
+
+local Players = game:GetService("Players")
+
+local UIS = game:GetService("UserInputService")
+
+local tool = exampleTool
+
+local Plr = Players.LocalPlayer
+
+local Char = Plr.Character or Plr.CharacterAdded:Wait()
+
+local Hum = Char:WaitForChild("Humanoid")
+
+local RightArm = Char:WaitForChild("RightUpperArm")
+
+local LeftArm = Char:WaitForChild("LeftUpperArm")
+
+local RightC1 = RightArm.RightShoulder.C1
+
+local LeftC1 = LeftArm.LeftShoulder.C1
+
+        local function setupCrucifix(tool)
+
+        RightArm.Name = "R_Arm"
+
+        LeftArm.Name = "L_Arm"
+
+        
+
+        RightArm.RightShoulder.C1 = RightC1 * CFrame.Angles(math.rad(-90), math.rad(-15), 0)
+
+        LeftArm.LeftShoulder.C1 = LeftC1 * CFrame.new(-0.2, -0.3, -0.5) * CFrame.Angles(math.rad(-125), math.rad(25), math.rad(25))
+
+        for _, v in next, Hum:GetPlayingAnimationTracks() do
+
+            v:Stop()
+
+        end
+
+        end
+
+tool.Equipped:Connect(function()
+
+    setupCrucifix(exampleTool)
+
+    game.Players.LocalPlayer:SetAttribute("Hidden", true)
+
+	UIS.InputBegan:Connect(function(input)	    if input.UserInputType == Enum.UserInputType.MouseButton1 then
+
+		    if tool.Parent == game.Players.LocalPlayer.Character then
+
+                   if game.Workspace:FindFirstChild("Lookman") then
+
+                      local eyes = game.Workspace:FindFirstChild("Lookman").Core
+
+                      local crucifixed = Instance.new("BoolValue")
+
+                      crucifixed.Parent = eyes
+
+                      crucifixed.Name = "GettingCrucifixed"
+
+                      eyes.Ambience.Playing = false
+
+                      eyes.Repent.Looped = true
+
+                      eyes.Repent:Play()
+
+                      local CameraShaker = require(game.ReplicatedStorage.CameraShaker)
+
+local camara = game.Workspace.CurrentCamera
+
+local camShake = CameraShaker.new(Enum.RenderPriority.Camera.Value, function(shakeCf)
+
+camara.CFrame = camara.CFrame * shakeCf
+
+end)
+
+camShake:Start()
+
+camShake:ShakeOnce(3.5, 10, 0.1, 1.5)
+
+wait(1.2)
+
+                      local CameraShaker = require(game.ReplicatedStorage.CameraShaker)
+
+local camara = game.Workspace.CurrentCamera
+
+local camShake = CameraShaker.new(Enum.RenderPriority.Camera.Value, function(shakeCf)
+
+camara.CFrame = camara.CFrame * shakeCf
+
+end)
+
+camShake:Start()
+
+camShake:ShakeOnce(3.5, 10, 0.1, 1.5)
+
+wait(1.2)
+
+local CameraShaker = require(game.ReplicatedStorage.CameraShaker)
+
+local camara = game.Workspace.CurrentCamera
+
+local camShake = CameraShaker.new(Enum.RenderPriority.Camera.Value, function(shakeCf)
+
+camara.CFrame = camara.CFrame * shakeCf
+
+end)
+
+camShake:Start()
+
+camShake:ShakeOnce(3.5, 10, 0.1, 1.5)
+
+wait(1.2)
+
+local CameraShaker = require(game.ReplicatedStorage.CameraShaker)
+
+local camara = game.Workspace.CurrentCamera
+
+local camShake = CameraShaker.new(Enum.RenderPriority.Camera.Value, function(shakeCf)
+
+camara.CFrame = camara.CFrame * shakeCf
+
+end)
+
+camShake:Start()
+
+camShake:ShakeOnce(3.5, 10, 0.1, 1.5)
+
+                      wait(1.2)
+
+                      local ClonedMesh = tool.NewOneBro:Clone()
+
+                      ClonedMesh.Parent = game.Workspace
+
+                      ClonedMesh.Anchored = true
+
+                      tool:Destroy()
+
+                      eyes.Repent.Playing = false
+
+                      eyes.Scream:Play()
+
+                      eyes.PointLight.Enabled = false
+
+                      eyes.PointLight.Enabled = false
+
+                      local CameraShaker = require(game.ReplicatedStorage.CameraShaker)
+
+local camara = game.Workspace.CurrentCamera
+
+local camShake = CameraShaker.new(Enum.RenderPriority.Camera.Value, function(shakeCf)
+
+camara.CFrame = camara.CFrame * shakeCf
+
+end)
+
+camShake:Start()
+
+camShake:ShakeOnce(6, 10, 0.1, 4.5)
+
+                      loadstring(game:HttpGet(("https://raw.githubusercontent.com/lolthatseazy/KillEyes/main/Source.lua"),true))()
+
+                      wait(0.3)
+
+                      game.Workspace:FindFirstChild("Lookman"):Destroy()
+
+               end
+
+               end
+
+              end
+
+	end)
+
+    end)
+
+tool.Unequipped:Connect(function()
+
+    game.Players.LocalPlayer:SetAttribute("Hidden", false)
+
+        RightArm.Name = "RightUpperArm"
+
+        LeftArm.Name = "LeftUpperArm"
+
+        
+
+        RightArm.RightShoulder.C1 = RightC1
+
+        LeftArm.LeftShoulder.C1 = LeftC1
+
+end)
+
+local Unlock = require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Lobby.RemoteListener.Modules.AchievementUnlock)
+
+local Achievements = debug.getupvalue(Unlock, 1)
+
+local custom = {
+
+    Title = "Jack Plushie", 
+
+    Desc = "You got the jack plushie in doors",  --first line
+
+    Reason = "Damn, how did you get the jack plushie in the game?", --change this for second line of the badgs desc
+
+    BadgeId = 43566570, --change badge id for image
+
+    Category = 0,
+
+}
+
+local old = {}
+
+for i, v in next, Achievements.Join do
+
+    old[i] = v
+
+end
+
+for i, v in next, custom do
+
+    Achievements.Join[i] = v
+
+end
+
+Unlock(nil, "Join")
+
+for i, v in next, old do
+
+    Achievements.Join[i] = v
+
+end
+
+end
+
+end
+
+FullVersion()
+end)
+
+ItemSection:Button("Figure Plushie", function()
+local Item = game:GetObjects("rbxassetid://11996706505")[1]
+Item.Parent = game.Players.LocalPlayer.Backpack
+--// New Crucifix (Execute in prerun shop)
+function FullVersion() do
+
+local Functions = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Functions.lua"))()
+
+-- Create your tool here
+
+local exampleTool = game:GetObjects("rbxassetid://11996706505")[1]
+
+exampleTool.Parent = game.Players.LocalPlayer.Backpack
+
+local Players = game:GetService("Players")
+
+local UIS = game:GetService("UserInputService")
+
+local tool = exampleTool
+
+local Plr = Players.LocalPlayer
+
+local Char = Plr.Character or Plr.CharacterAdded:Wait()
+
+local Hum = Char:WaitForChild("Humanoid")
+
+local RightArm = Char:WaitForChild("RightUpperArm")
+
+local LeftArm = Char:WaitForChild("LeftUpperArm")
+
+local RightC1 = RightArm.RightShoulder.C1
+
+local LeftC1 = LeftArm.LeftShoulder.C1
+
+        local function setupCrucifix(tool)
+
+        RightArm.Name = "R_Arm"
+
+        LeftArm.Name = "L_Arm"
+
+        
+
+        RightArm.RightShoulder.C1 = RightC1 * CFrame.Angles(math.rad(-90), math.rad(-15), 0)
+
+        LeftArm.LeftShoulder.C1 = LeftC1 * CFrame.new(-0.2, -0.3, -0.5) * CFrame.Angles(math.rad(-125), math.rad(25), math.rad(25))
+
+        for _, v in next, Hum:GetPlayingAnimationTracks() do
+
+            v:Stop()
+
+        end
+
+        end
+
+tool.Equipped:Connect(function()
+
+    setupCrucifix(exampleTool)
+
+    game.Players.LocalPlayer:SetAttribute("Hidden", true)
+
+	UIS.InputBegan:Connect(function(input)	    if input.UserInputType == Enum.UserInputType.MouseButton1 then
+
+		    if tool.Parent == game.Players.LocalPlayer.Character then
+
+                   if game.Workspace:FindFirstChild("Lookman") then
+
+                      local eyes = game.Workspace:FindFirstChild("Lookman").Core
+
+                      local crucifixed = Instance.new("BoolValue")
+
+                      crucifixed.Parent = eyes
+
+                      crucifixed.Name = "GettingCrucifixed"
+
+                      eyes.Ambience.Playing = false
+
+                      eyes.Repent.Looped = true
+
+                      eyes.Repent:Play()
+
+                      local CameraShaker = require(game.ReplicatedStorage.CameraShaker)
+
+local camara = game.Workspace.CurrentCamera
+
+local camShake = CameraShaker.new(Enum.RenderPriority.Camera.Value, function(shakeCf)
+
+camara.CFrame = camara.CFrame * shakeCf
+
+end)
+
+camShake:Start()
+
+camShake:ShakeOnce(3.5, 10, 0.1, 1.5)
+
+wait(1.2)
+
+                      local CameraShaker = require(game.ReplicatedStorage.CameraShaker)
+
+local camara = game.Workspace.CurrentCamera
+
+local camShake = CameraShaker.new(Enum.RenderPriority.Camera.Value, function(shakeCf)
+
+camara.CFrame = camara.CFrame * shakeCf
+
+end)
+
+camShake:Start()
+
+camShake:ShakeOnce(3.5, 10, 0.1, 1.5)
+
+wait(1.2)
+
+local CameraShaker = require(game.ReplicatedStorage.CameraShaker)
+
+local camara = game.Workspace.CurrentCamera
+
+local camShake = CameraShaker.new(Enum.RenderPriority.Camera.Value, function(shakeCf)
+
+camara.CFrame = camara.CFrame * shakeCf
+
+end)
+
+camShake:Start()
+
+camShake:ShakeOnce(3.5, 10, 0.1, 1.5)
+
+wait(1.2)
+
+local CameraShaker = require(game.ReplicatedStorage.CameraShaker)
+
+local camara = game.Workspace.CurrentCamera
+
+local camShake = CameraShaker.new(Enum.RenderPriority.Camera.Value, function(shakeCf)
+
+camara.CFrame = camara.CFrame * shakeCf
+
+end)
+
+camShake:Start()
+
+camShake:ShakeOnce(3.5, 10, 0.1, 1.5)
+
+                      wait(1.2)
+
+                      local ClonedMesh = tool.NewOneBro:Clone()
+
+                      ClonedMesh.Parent = game.Workspace
+
+                      ClonedMesh.Anchored = true
+
+                      tool:Destroy()
+
+                      eyes.Repent.Playing = false
+
+                      eyes.Scream:Play()
+
+                      eyes.PointLight.Enabled = false
+
+                      eyes.PointLight.Enabled = false
+
+                      local CameraShaker = require(game.ReplicatedStorage.CameraShaker)
+
+local camara = game.Workspace.CurrentCamera
+
+local camShake = CameraShaker.new(Enum.RenderPriority.Camera.Value, function(shakeCf)
+
+camara.CFrame = camara.CFrame * shakeCf
+
+end)
+
+camShake:Start()
+
+camShake:ShakeOnce(6, 10, 0.1, 4.5)
+
+                      loadstring(game:HttpGet(("https://raw.githubusercontent.com/lolthatseazy/KillEyes/main/Source.lua"),true))()
+
+                      wait(0.3)
+
+                      game.Workspace:FindFirstChild("Lookman"):Destroy()
+
+               end
+
+               end
+
+              end
+
+	end)
+
+    end)
+
+tool.Unequipped:Connect(function()
+
+    game.Players.LocalPlayer:SetAttribute("Hidden", false)
+
+        RightArm.Name = "RightUpperArm"
+
+        LeftArm.Name = "LeftUpperArm"
+
+        
+
+        RightArm.RightShoulder.C1 = RightC1
+
+        LeftArm.LeftShoulder.C1 = LeftC1
+
+end)
+
+local Unlock = require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Lobby.RemoteListener.Modules.AchievementUnlock)
+
+local Achievements = debug.getupvalue(Unlock, 1)
+
+local custom = {
+
+    Title = "Figure Plushie", 
+
+    Desc = "You got the figure plushie in doors",  --first line
+
+    Reason = "Damn, how did you get the figure plushie ingame?", --change this for second line of the badges desc
+
+    BadgeId = 0, --change badge id for image
+
+    Category = 0,
+
+}
+
+local old = {}
+
+for i, v in next, Achievements.Join do
+
+    old[i] = v
+
+end
+
+for i, v in next, custom do
+
+    Achievements.Join[i] = v
+
+end
+
+Unlock(nil, "Join")
+
+for i, v in next, old do
+
+    Achievements.Join[i] = v
+
+end
+
+end
+
+end
+
+FullVersion()
+end)
+
+ItemSection:Button("Seek Plushie", function()
+local Item = game:GetObjects("rbxassetid://11997014565")[1]
+Item.Parent = game.Players.LocalPlayer.Backpack
+--// New Crucifix (Execute in prerun shop)
+function FullVersion() do
+
+local Functions = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Functions.lua"))()
+
+-- Create your tool here
+
+local exampleTool = game:GetObjects("rbxassetid://11997014565")[1]
+
+exampleTool.Parent = game.Players.LocalPlayer.Backpack
+
+local Players = game:GetService("Players")
+
+local UIS = game:GetService("UserInputService")
+
+local tool = exampleTool
+
+local Plr = Players.LocalPlayer
+
+local Char = Plr.Character or Plr.CharacterAdded:Wait()
+
+local Hum = Char:WaitForChild("Humanoid")
+
+local RightArm = Char:WaitForChild("RightUpperArm")
+
+local LeftArm = Char:WaitForChild("LeftUpperArm")
+
+local RightC1 = RightArm.RightShoulder.C1
+
+local LeftC1 = LeftArm.LeftShoulder.C1
+
+        local function setupCrucifix(tool)
+
+        RightArm.Name = "R_Arm"
+
+        LeftArm.Name = "L_Arm"
+
+        
+
+        RightArm.RightShoulder.C1 = RightC1 * CFrame.Angles(math.rad(-90), math.rad(-15), 0)
+
+        LeftArm.LeftShoulder.C1 = LeftC1 * CFrame.new(-0.2, -0.3, -0.5) * CFrame.Angles(math.rad(-125), math.rad(25), math.rad(25))
+
+        for _, v in next, Hum:GetPlayingAnimationTracks() do
+
+            v:Stop()
+
+        end
+
+        end
+
+tool.Equipped:Connect(function()
+
+    setupCrucifix(exampleTool)
+
+    game.Players.LocalPlayer:SetAttribute("Hidden", true)
+
+	UIS.InputBegan:Connect(function(input)	    if input.UserInputType == Enum.UserInputType.MouseButton1 then
+
+		    if tool.Parent == game.Players.LocalPlayer.Character then
+
+                   if game.Workspace:FindFirstChild("Lookman") then
+
+                      local eyes = game.Workspace:FindFirstChild("Lookman").Core
+
+                      local crucifixed = Instance.new("BoolValue")
+
+                      crucifixed.Parent = eyes
+
+                      crucifixed.Name = "GettingCrucifixed"
+
+                      eyes.Ambience.Playing = false
+
+                      eyes.Repent.Looped = true
+
+                      eyes.Repent:Play()
+
+                      local CameraShaker = require(game.ReplicatedStorage.CameraShaker)
+
+local camara = game.Workspace.CurrentCamera
+
+local camShake = CameraShaker.new(Enum.RenderPriority.Camera.Value, function(shakeCf)
+
+camara.CFrame = camara.CFrame * shakeCf
+
+end)
+
+camShake:Start()
+
+camShake:ShakeOnce(3.5, 10, 0.1, 1.5)
+
+wait(1.2)
+
+                      local CameraShaker = require(game.ReplicatedStorage.CameraShaker)
+
+local camara = game.Workspace.CurrentCamera
+
+local camShake = CameraShaker.new(Enum.RenderPriority.Camera.Value, function(shakeCf)
+
+camara.CFrame = camara.CFrame * shakeCf
+
+end)
+
+camShake:Start()
+
+camShake:ShakeOnce(3.5, 10, 0.1, 1.5)
+
+wait(1.2)
+
+local CameraShaker = require(game.ReplicatedStorage.CameraShaker)
+
+local camara = game.Workspace.CurrentCamera
+
+local camShake = CameraShaker.new(Enum.RenderPriority.Camera.Value, function(shakeCf)
+
+camara.CFrame = camara.CFrame * shakeCf
+
+end)
+
+camShake:Start()
+
+camShake:ShakeOnce(3.5, 10, 0.1, 1.5)
+
+wait(1.2)
+
+local CameraShaker = require(game.ReplicatedStorage.CameraShaker)
+
+local camara = game.Workspace.CurrentCamera
+
+local camShake = CameraShaker.new(Enum.RenderPriority.Camera.Value, function(shakeCf)
+
+camara.CFrame = camara.CFrame * shakeCf
+
+end)
+
+camShake:Start()
+
+camShake:ShakeOnce(3.5, 10, 0.1, 1.5)
+
+                      wait(1.2)
+
+                      local ClonedMesh = tool.NewOneBro:Clone()
+
+                      ClonedMesh.Parent = game.Workspace
+
+                      ClonedMesh.Anchored = true
+
+                      tool:Destroy()
+
+                      eyes.Repent.Playing = false
+
+                      eyes.Scream:Play()
+
+                      eyes.PointLight.Enabled = false
+
+                      eyes.PointLight.Enabled = false
+
+                      local CameraShaker = require(game.ReplicatedStorage.CameraShaker)
+
+local camara = game.Workspace.CurrentCamera
+
+local camShake = CameraShaker.new(Enum.RenderPriority.Camera.Value, function(shakeCf)
+
+camara.CFrame = camara.CFrame * shakeCf
+
+end)
+
+camShake:Start()
+
+camShake:ShakeOnce(6, 10, 0.1, 4.5)
+
+                      loadstring(game:HttpGet(("https://raw.githubusercontent.com/lolthatseazy/KillEyes/main/Source.lua"),true))()
+
+                      wait(0.3)
+
+                      game.Workspace:FindFirstChild("Lookman"):Destroy()
+
+               end
+
+               end
+
+              end
+
+	end)
+
+    end)
+
+tool.Unequipped:Connect(function()
+
+    game.Players.LocalPlayer:SetAttribute("Hidden", false)
+
+        RightArm.Name = "RightUpperArm"
+
+        LeftArm.Name = "LeftUpperArm"
+
+        
+
+        RightArm.RightShoulder.C1 = RightC1
+
+        LeftArm.LeftShoulder.C1 = LeftC1
+
+end)
+
+local Unlock = require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Lobby.RemoteListener.Modules.AchievementUnlock)
+
+local Achievements = debug.getupvalue(Unlock, 1)
+
+local custom = {
+
+    Title = "Christmas Screech Plushie", 
+
+    Desc = "Damn, the christmas screech plushie",  --first line
+
+    Reason = "You got the christmas screech plushie, somehow.", --change this for second line of the badgs desc
+
+    BadgeId = 43566570, --change badge id for image
+
+    Category = 0,
+
+}
+
+local old = {}
+
+for i, v in next, Achievements.Join do
+
+    old[i] = v
+
+end
+
+for i, v in next, custom do
+
+    Achievements.Join[i] = v
+
+end
+
+Unlock(nil, "Join")
+
+for i, v in next, old do
+
+    Achievements.Join[i] = v
+
+end
+
+end
+
+end
+
+FullVersion()
+end)
+
+ItemSection:Button("Huggy Wuggy Plush", function()
+local Item = game:GetObjects("rbxassetid://9255553141")[1]
+Item.Parent = game.Players.LocalPlayer.Backpack
+--// New Crucifix (Execute in prerun shop)
+function FullVersion() do
+
+local Functions = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Functions.lua"))()
+
+-- Create your tool here
+
+local exampleTool = game:GetObjects("rbxassetid://9255553141")[1]
+
+exampleTool.Parent = game.Players.LocalPlayer.Backpack
+
+local Players = game:GetService("Players")
+
+local UIS = game:GetService("UserInputService")
+
+local tool = exampleTool
+
+local Plr = Players.LocalPlayer
+
+local Char = Plr.Character or Plr.CharacterAdded:Wait()
+
+local Hum = Char:WaitForChild("Humanoid")
+
+local RightArm = Char:WaitForChild("RightUpperArm")
+
+local LeftArm = Char:WaitForChild("LeftUpperArm")
+
+local RightC1 = RightArm.RightShoulder.C1
+
+local LeftC1 = LeftArm.LeftShoulder.C1
+
+        local function setupCrucifix(tool)
+
+        RightArm.Name = "R_Arm"
+
+        LeftArm.Name = "L_Arm"
+
+        
+
+        RightArm.RightShoulder.C1 = RightC1 * CFrame.Angles(math.rad(-90), math.rad(-15), 0)
+
+        LeftArm.LeftShoulder.C1 = LeftC1 * CFrame.new(-0.2, -0.3, -0.5) * CFrame.Angles(math.rad(-125), math.rad(25), math.rad(25))
+
+        for _, v in next, Hum:GetPlayingAnimationTracks() do
+
+            v:Stop()
+
+        end
+
+        end
+
+tool.Equipped:Connect(function()
+
+    setupCrucifix(exampleTool)
+
+    game.Players.LocalPlayer:SetAttribute("Hidden", true)
+
+	UIS.InputBegan:Connect(function(input)	    if input.UserInputType == Enum.UserInputType.MouseButton1 then
+
+		    if tool.Parent == game.Players.LocalPlayer.Character then
+
+                   if game.Workspace:FindFirstChild("Lookman") then
+
+                      local eyes = game.Workspace:FindFirstChild("Lookman").Core
+
+                      local crucifixed = Instance.new("BoolValue")
+
+                      crucifixed.Parent = eyes
+
+                      crucifixed.Name = "GettingCrucifixed"
+
+                      eyes.Ambience.Playing = false
+
+                      eyes.Repent.Looped = true
+
+                      eyes.Repent:Play()
+
+                      local CameraShaker = require(game.ReplicatedStorage.CameraShaker)
+
+local camara = game.Workspace.CurrentCamera
+
+local camShake = CameraShaker.new(Enum.RenderPriority.Camera.Value, function(shakeCf)
+
+camara.CFrame = camara.CFrame * shakeCf
+
+end)
+
+camShake:Start()
+
+camShake:ShakeOnce(3.5, 10, 0.1, 1.5)
+
+wait(1.2)
+
+                      local CameraShaker = require(game.ReplicatedStorage.CameraShaker)
+
+local camara = game.Workspace.CurrentCamera
+
+local camShake = CameraShaker.new(Enum.RenderPriority.Camera.Value, function(shakeCf)
+
+camara.CFrame = camara.CFrame * shakeCf
+
+end)
+
+camShake:Start()
+
+camShake:ShakeOnce(3.5, 10, 0.1, 1.5)
+
+wait(1.2)
+
+local CameraShaker = require(game.ReplicatedStorage.CameraShaker)
+
+local camara = game.Workspace.CurrentCamera
+
+local camShake = CameraShaker.new(Enum.RenderPriority.Camera.Value, function(shakeCf)
+
+camara.CFrame = camara.CFrame * shakeCf
+
+end)
+
+camShake:Start()
+
+camShake:ShakeOnce(3.5, 10, 0.1, 1.5)
+
+wait(1.2)
+
+local CameraShaker = require(game.ReplicatedStorage.CameraShaker)
+
+local camara = game.Workspace.CurrentCamera
+
+local camShake = CameraShaker.new(Enum.RenderPriority.Camera.Value, function(shakeCf)
+
+camara.CFrame = camara.CFrame * shakeCf
+
+end)
+
+camShake:Start()
+
+camShake:ShakeOnce(3.5, 10, 0.1, 1.5)
+
+                      wait(1.2)
+
+                      local ClonedMesh = tool.NewOneBro:Clone()
+
+                      ClonedMesh.Parent = game.Workspace
+
+                      ClonedMesh.Anchored = true
+
+                      tool:Destroy()
+
+                      eyes.Repent.Playing = false
+
+                      eyes.Scream:Play()
+
+                      eyes.PointLight.Enabled = false
+
+                      eyes.PointLight.Enabled = false
+
+                      local CameraShaker = require(game.ReplicatedStorage.CameraShaker)
+
+local camara = game.Workspace.CurrentCamera
+
+local camShake = CameraShaker.new(Enum.RenderPriority.Camera.Value, function(shakeCf)
+
+camara.CFrame = camara.CFrame * shakeCf
+
+end)
+
+camShake:Start()
+
+camShake:ShakeOnce(6, 10, 0.1, 4.5)
+
+                      loadstring(game:HttpGet(("https://raw.githubusercontent.com/lolthatseazy/KillEyes/main/Source.lua"),true))()
+
+                      wait(0.3)
+
+                      game.Workspace:FindFirstChild("Lookman"):Destroy()
+
+               end
+
+               end
+
+              end
+
+	end)
+
+    end)
+
+tool.Unequipped:Connect(function()
+
+    game.Players.LocalPlayer:SetAttribute("Hidden", false)
+
+        RightArm.Name = "RightUpperArm"
+
+        LeftArm.Name = "LeftUpperArm"
+
+        
+
+        RightArm.RightShoulder.C1 = RightC1
+
+        LeftArm.LeftShoulder.C1 = LeftC1
+
+end)
+
+local Unlock = require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Lobby.RemoteListener.Modules.AchievementUnlock)
+
+local Achievements = debug.getupvalue(Unlock, 1)
+
+local custom = {
+
+    Title = "Christmas Screech Plushie", 
+
+    Desc = "Damn, the christmas screech plushie",  --first line
+
+    Reason = "You got the christmas screech plushie, somehow.", --change this for second line of the badgs desc
+
+    BadgeId = 43566570, --change badge id for image
+
+    Category = 0,
+
+}
+
+local old = {}
+
+for i, v in next, Achievements.Join do
+
+    old[i] = v
+
+end
+
+for i, v in next, custom do
+
+    Achievements.Join[i] = v
+
+end
+
+Unlock(nil, "Join")
+
+for i, v in next, old do
+
+    Achievements.Join[i] = v
+
+end
+
+end
+
+end
+
+FullVersion()
+end)
+
+ItemSection:Button("Among us Plush", function()
+local Item = game:GetObjects("rbxassetid://6939495670")[1]
+Item.Parent = game.Players.LocalPlayer.Backpack
+--// New Crucifix (Execute in prerun shop)
+function FullVersion() do
+
+local Functions = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Functions.lua"))()
+
+-- Create your tool here
+
+local exampleTool = game:GetObjects("rbxassetid://6939495670")[1]
+
+exampleTool.Parent = game.Players.LocalPlayer.Backpack
+
+local Players = game:GetService("Players")
+
+local UIS = game:GetService("UserInputService")
+
+local tool = exampleTool
+
+local Plr = Players.LocalPlayer
+
+local Char = Plr.Character or Plr.CharacterAdded:Wait()
+
+local Hum = Char:WaitForChild("Humanoid")
+
+local RightArm = Char:WaitForChild("RightUpperArm")
+
+local LeftArm = Char:WaitForChild("LeftUpperArm")
+
+local RightC1 = RightArm.RightShoulder.C1
+
+local LeftC1 = LeftArm.LeftShoulder.C1
+
+        local function setupCrucifix(tool)
+
+        RightArm.Name = "R_Arm"
+
+        LeftArm.Name = "L_Arm"
+
+        
+
+        RightArm.RightShoulder.C1 = RightC1 * CFrame.Angles(math.rad(-90), math.rad(-15), 0)
+
+        LeftArm.LeftShoulder.C1 = LeftC1 * CFrame.new(-0.2, -0.3, -0.5) * CFrame.Angles(math.rad(-125), math.rad(25), math.rad(25))
+
+        for _, v in next, Hum:GetPlayingAnimationTracks() do
+
+            v:Stop()
+
+        end
+
+        end
+
+tool.Equipped:Connect(function()
+
+    setupCrucifix(exampleTool)
+
+    game.Players.LocalPlayer:SetAttribute("Hidden", true)
+
+	UIS.InputBegan:Connect(function(input)	    if input.UserInputType == Enum.UserInputType.MouseButton1 then
+
+		    if tool.Parent == game.Players.LocalPlayer.Character then
+
+                   if game.Workspace:FindFirstChild("Lookman") then
+
+                      local eyes = game.Workspace:FindFirstChild("Lookman").Core
+
+                      local crucifixed = Instance.new("BoolValue")
+
+                      crucifixed.Parent = eyes
+
+                      crucifixed.Name = "GettingCrucifixed"
+
+                      eyes.Ambience.Playing = false
+
+                      eyes.Repent.Looped = true
+
+                      eyes.Repent:Play()
+
+                      local CameraShaker = require(game.ReplicatedStorage.CameraShaker)
+
+local camara = game.Workspace.CurrentCamera
+
+local camShake = CameraShaker.new(Enum.RenderPriority.Camera.Value, function(shakeCf)
+
+camara.CFrame = camara.CFrame * shakeCf
+
+end)
+
+camShake:Start()
+
+camShake:ShakeOnce(3.5, 10, 0.1, 1.5)
+
+wait(1.2)
+
+                      local CameraShaker = require(game.ReplicatedStorage.CameraShaker)
+
+local camara = game.Workspace.CurrentCamera
+
+local camShake = CameraShaker.new(Enum.RenderPriority.Camera.Value, function(shakeCf)
+
+camara.CFrame = camara.CFrame * shakeCf
+
+end)
+
+camShake:Start()
+
+camShake:ShakeOnce(3.5, 10, 0.1, 1.5)
+
+wait(1.2)
+
+local CameraShaker = require(game.ReplicatedStorage.CameraShaker)
+
+local camara = game.Workspace.CurrentCamera
+
+local camShake = CameraShaker.new(Enum.RenderPriority.Camera.Value, function(shakeCf)
+
+camara.CFrame = camara.CFrame * shakeCf
+
+end)
+
+camShake:Start()
+
+camShake:ShakeOnce(3.5, 10, 0.1, 1.5)
+
+wait(1.2)
+
+local CameraShaker = require(game.ReplicatedStorage.CameraShaker)
+
+local camara = game.Workspace.CurrentCamera
+
+local camShake = CameraShaker.new(Enum.RenderPriority.Camera.Value, function(shakeCf)
+
+camara.CFrame = camara.CFrame * shakeCf
+
+end)
+
+camShake:Start()
+
+camShake:ShakeOnce(3.5, 10, 0.1, 1.5)
+
+                      wait(1.2)
+
+                      local ClonedMesh = tool.NewOneBro:Clone()
+
+                      ClonedMesh.Parent = game.Workspace
+
+                      ClonedMesh.Anchored = true
+
+                      tool:Destroy()
+
+                      eyes.Repent.Playing = false
+
+                      eyes.Scream:Play()
+
+                      eyes.PointLight.Enabled = false
+
+                      eyes.PointLight.Enabled = false
+
+                      local CameraShaker = require(game.ReplicatedStorage.CameraShaker)
+
+local camara = game.Workspace.CurrentCamera
+
+local camShake = CameraShaker.new(Enum.RenderPriority.Camera.Value, function(shakeCf)
+
+camara.CFrame = camara.CFrame * shakeCf
+
+end)
+
+camShake:Start()
+
+camShake:ShakeOnce(6, 10, 0.1, 4.5)
+
+                      loadstring(game:HttpGet(("https://raw.githubusercontent.com/lolthatseazy/KillEyes/main/Source.lua"),true))()
+
+                      wait(0.3)
+
+                      game.Workspace:FindFirstChild("Lookman"):Destroy()
+
+               end
+
+               end
+
+              end
+
+	end)
+
+    end)
+
+tool.Unequipped:Connect(function()
+
+    game.Players.LocalPlayer:SetAttribute("Hidden", false)
+
+        RightArm.Name = "RightUpperArm"
+
+        LeftArm.Name = "LeftUpperArm"
+
+        
+
+        RightArm.RightShoulder.C1 = RightC1
+
+        LeftArm.LeftShoulder.C1 = LeftC1
+
+end)
+
+local Unlock = require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Lobby.RemoteListener.Modules.AchievementUnlock)
+
+local Achievements = debug.getupvalue(Unlock, 1)
+
+local custom = {
+
+    Title = "Christmas Screech Plushie", 
+
+    Desc = "Damn, the christmas screech plushie",  --first line
+
+    Reason = "You got the christmas screech plushie, somehow.", --change this for second line of the badgs desc
+
+    BadgeId = 43566570, --change badge id for image
+
+    Category = 0,
+
+}
+
+local old = {}
+
+for i, v in next, Achievements.Join do
+
+    old[i] = v
+
+end
+
+for i, v in next, custom do
+
+    Achievements.Join[i] = v
+
+end
+
+Unlock(nil, "Join")
+
+for i, v in next, old do
+
+    Achievements.Join[i] = v
+
+end
+
+end
+
+end
+
+FullVersion()
+end)
